@@ -1,0 +1,58 @@
+# Compile-and-test checks only. No secrets, no paid services, no publishing.
+name: ci
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-14, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Shared pipeline unit tests
+        run: cargo test -p kikoe-core
+
+  windows-build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Frontend
+        working-directory: app
+        run: npm ci && npm run build
+      - name: Capture adapter (WASAPI), worker and app, CPU build
+        shell: bash
+        run: |
+          cargo build -p kikoe-capture
+          cargo build -p kikoe-mt
+          mkdir -p app/src-tauri/binaries
+          cp target/debug/kikoe-mt.exe app/src-tauri/binaries/kikoe-mt-x86_64-pc-windows-msvc.exe
+          cargo build -p kikoe-live
+
+  macos-build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Frontend
+        working-directory: app
+        run: npm ci && npm run build
+      - name: Capture adapter (ScreenCaptureKit), worker and app, Metal build
+        run: |
+          cargo build -p kikoe-capture
+          cargo build -p kikoe-mt --features metal
+          mkdir -p app/src-tauri/binaries
+          cp target/debug/kikoe-mt app/src-tauri/binaries/kikoe-mt-aarch64-apple-darwin
+          cargo build -p kikoe-live --features metal
