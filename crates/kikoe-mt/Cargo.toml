@@ -1,0 +1,18 @@
+[package]
+name = "kikoe-mt"
+description = "KikoeLive translation worker: a separate process running a local LLM (llama.cpp) that translates Japanese lines into the requested target language over a JSON-lines stdin/stdout protocol."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[features]
+default = []
+cuda = ["llama-cpp-2/cuda"]
+metal = ["llama-cpp-2/metal"]
+
+[dependencies]
+kikoe-core.workspace = true
+llama-cpp-2 = "0.1.161"
+serde_json.workspace = true
+anyhow.workspace = true

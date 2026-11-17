@@ -147,6 +147,8 @@ pub fn default_translator(lang: TargetLanguage) -> &'static ModelSpec {
 }
 
 pub const DEFAULT_TRANSLATOR_ID: &str = "qwen3.5-4b-q4_k_m";
+/// Route for Spanish subtitles, chosen from the measurements in EVIDENCE.md.
+pub const DEFAULT_SPANISH_ROUTE: crate::translate::Route = crate::translate::Route::Direct;
 pub const DEFAULT_ASR_ID: &str = "whisper-large-v3-turbo-q5_0";
 pub const DEFAULT_VAD_ID: &str = "silero-vad-v6.2.0";
 

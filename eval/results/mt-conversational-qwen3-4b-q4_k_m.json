@@ -1,0 +1,1987 @@
+{
+  "model": "C:\\Users\\jhvan\\AppData\\Local\\KikoeLive\\models\\Qwen3-4B-Q4_K_M.gguf",
+  "results": [
+    {
+      "cached_tokens": 0,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 229.061,
+      "generated_tokens": 12,
+      "id": "c01",
+      "ja": "ぺこらは今日ホラーゲームやらないよ。",
+      "lang": "en",
+      "ms": 492.5698,
+      "output": "Pekora isn't playing a horror game today.",
+      "prompt_ms": 262.9787,
+      "prompt_tokens": 433,
+      "raw": "Pekora isn't playing a horror game today.",
+      "reference": "Pekora isn't playing a horror game today.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "self-name",
+        "name"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 44.08654003279296,
+      "context": [],
+      "generate_ms": 144.6798,
+      "generated_tokens": 8,
+      "id": "c02",
+      "ja": "え、待って、それ本当？",
+      "lang": "en",
+      "ms": 165.65650000000002,
+      "output": "Wait, is that really true?",
+      "prompt_ms": 20.8146,
+      "prompt_tokens": 427,
+      "raw": "Wait, is that really true?",
+      "reference": "Wait, what? Is that true?",
+      "sanitize_issue": null,
+      "tags": [
+        "question",
+        "interjection"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 18.333801972777668,
+      "context": [],
+      "generate_ms": 449.1009,
+      "generated_tokens": 25,
+      "id": "c03",
+      "ja": "やばいやばいやばい、死ぬ死ぬ！",
+      "lang": "en",
+      "ms": 467.9956,
+      "output": "Ugh! It's so bad, it's so bad, it's so bad! I'm going to die!",
+      "prompt_ms": 18.7336,
+      "prompt_tokens": 432,
+      "raw": "Ugh! It's so bad, it's so bad, it's so bad! I'm going to die!",
+      "reference": "Oh no, oh no, oh no, I'm gonna die, I'm gonna die!",
+      "sanitize_issue": null,
+      "tags": [
+        "reaction",
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 19.718526299408655,
+      "context": [],
+      "generate_ms": 108.9282,
+      "generated_tokens": 6,
+      "id": "c04",
+      "ja": "全然怖くないし。",
+      "lang": "en",
+      "ms": 129.2683,
+      "output": "Far from being scary.",
+      "prompt_ms": 20.1841,
+      "prompt_tokens": 426,
+      "raw": "Far from being scary.",
+      "reference": "It's not scary at all.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 42.70328148488114,
+      "context": [],
+      "generate_ms": 200.7274,
+      "generated_tokens": 11,
+      "id": "c05",
+      "ja": "怖くないわけじゃないけど、大丈夫。",
+      "lang": "en",
+      "ms": 223.1746,
+      "output": "It's not scary, but it's okay.",
+      "prompt_ms": 22.2706,
+      "prompt_tokens": 429,
+      "raw": "It's not scary, but it's okay.",
+      "reference": "It's not that I'm not scared, but I'm okay.",
+      "sanitize_issue": null,
+      "tags": [
+        "double-negation"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 50.616740027495176,
+      "context": [],
+      "generate_ms": 176.2502,
+      "generated_tokens": 10,
+      "id": "c06",
+      "ja": "まだ行かないで、ちょっと待って。",
+      "lang": "en",
+      "ms": 204.58599999999998,
+      "output": "Wait a minute, don't go yet.",
+      "prompt_ms": 28.1839,
+      "prompt_tokens": 428,
+      "raw": "Wait a minute, don't go yet.",
+      "reference": "Don't go yet, wait a second.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "imperative"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 84.2956694221062,
+      "context": [],
+      "generate_ms": 149.0478,
+      "generated_tokens": 8,
+      "id": "c07",
+      "ja": "みんな、コメントありがとう！",
+      "lang": "en",
+      "ms": 171.2757,
+      "output": "Everyone, thanks for the comments!",
+      "prompt_ms": 22.0295,
+      "prompt_tokens": 424,
+      "raw": "Everyone, thanks for the comments!",
+      "reference": "Thanks for the comments, everyone!",
+      "sanitize_issue": null,
+      "tags": [
+        "chat"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 77.53392596608374,
+      "context": [],
+      "generate_ms": 274.4059,
+      "generated_tokens": 15,
+      "id": "c08",
+      "ja": "今日は新しいゲームをやっていくぺこ。",
+      "lang": "en",
+      "ms": 303.1682,
+      "output": "Today, I'm going to play a new game, peko.",
+      "prompt_ms": 28.5749,
+      "prompt_tokens": 428,
+      "raw": "Today, I'm going to play a new game, peko.",
+      "reference": "Today we're going to play a new game, peko.",
+      "sanitize_issue": null,
+      "tags": [
+        "name",
+        "tic"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 67.76763453937367,
+      "context": [],
+      "generate_ms": 149.6876,
+      "generated_tokens": 8,
+      "id": "c09",
+      "ja": "それはマリン船長のせいだよ。",
+      "lang": "en",
+      "ms": 172.0046,
+      "output": "That's Marine Captain's fault.",
+      "prompt_ms": 22.1478,
+      "prompt_tokens": 429,
+      "raw": "That's Marine Captain's fault.",
+      "reference": "That's Captain Marine's fault.",
+      "sanitize_issue": null,
+      "tags": [
+        "name",
+        "subject"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 89.00959999999999,
+      "generated_tokens": 5,
+      "id": "c10",
+      "ja": "誰がそんなこと言ったの？",
+      "lang": "en",
+      "ms": 117.5175,
+      "output": "Who said that?",
+      "prompt_ms": 28.336,
+      "prompt_tokens": 427,
+      "raw": "Who said that?",
+      "reference": "Who said that?",
+      "sanitize_issue": null,
+      "tags": [
+        "question"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 25.53613013187928,
+      "context": [],
+      "generate_ms": 141.443,
+      "generated_tokens": 8,
+      "id": "c11",
+      "ja": "もう二度とやらない。",
+      "lang": "en",
+      "ms": 168.1646,
+      "output": "I won't do it again.",
+      "prompt_ms": 26.5657,
+      "prompt_tokens": 427,
+      "raw": "I won't do it again.",
+      "reference": "I'm never doing this again.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 81.75738869502491,
+      "context": [],
+      "generate_ms": 125.6909,
+      "generated_tokens": 7,
+      "id": "c12",
+      "ja": "あれ、ドアが開かない。",
+      "lang": "en",
+      "ms": 149.70749999999998,
+      "output": "The door won't open.",
+      "prompt_ms": 23.8627,
+      "prompt_tokens": 427,
+      "raw": "The door won't open.",
+      "reference": "Huh, the door won't open.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 47.15579487574412,
+      "context": [],
+      "generate_ms": 146.6482,
+      "generated_tokens": 8,
+      "id": "c13",
+      "ja": "鍵を取ってから戻ろう。",
+      "lang": "en",
+      "ms": 167.4045,
+      "output": "Take the key and go back.",
+      "prompt_ms": 20.5993,
+      "prompt_tokens": 429,
+      "raw": "Take the key and go back.",
+      "reference": "Let's get the key and then go back.",
+      "sanitize_issue": null,
+      "tags": [
+        "action",
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 18.881585132779925,
+      "context": [],
+      "generate_ms": 127.4516,
+      "generated_tokens": 7,
+      "id": "c14",
+      "ja": "左だって言ったじゃん！",
+      "lang": "en",
+      "ms": 149.3942,
+      "output": "Left, I said that!",
+      "prompt_ms": 21.7996,
+      "prompt_tokens": 425,
+      "raw": "Left, I said that!",
+      "reference": "I told you it was left!",
+      "sanitize_issue": null,
+      "tags": [
+        "subject"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 62.20614480051958,
+      "context": [],
+      "generate_ms": 200.1595,
+      "generated_tokens": 11,
+      "id": "c15",
+      "ja": "ちょっと音大きすぎない？",
+      "lang": "en",
+      "ms": 219.7405,
+      "output": "Hmm, the sound's a bit too loud.",
+      "prompt_ms": 19.445,
+      "prompt_tokens": 425,
+      "raw": "Hmm, the sound's a bit too loud.",
+      "reference": "Isn't the sound a bit too loud?",
+      "sanitize_issue": null,
+      "tags": [
+        "negative-question"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 145.9222,
+      "generated_tokens": 8,
+      "id": "c16",
+      "ja": "配信始めるの遅れてごめんね。",
+      "lang": "en",
+      "ms": 165.3252,
+      "output": "Sorry for starting the stream late.",
+      "prompt_ms": 19.2651,
+      "prompt_tokens": 432,
+      "raw": "Sorry for starting the stream late.",
+      "reference": "Sorry for starting the stream late.",
+      "sanitize_issue": null,
+      "tags": [
+        "stream"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 72.39691345829787,
+      "context": [],
+      "generate_ms": 276.3954,
+      "generated_tokens": 15,
+      "id": "c17",
+      "ja": "お腹すいたから、ちょっと休憩する。",
+      "lang": "en",
+      "ms": 298.06100000000004,
+      "output": "I'm hungry, so I'll take a break for a bit.",
+      "prompt_ms": 21.5089,
+      "prompt_tokens": 430,
+      "raw": "I'm hungry, so I'll take a break for a bit.",
+      "reference": "I'm hungry, so I'll take a short break.",
+      "sanitize_issue": null,
+      "tags": [
+        "cause"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 76.01721267878344,
+      "context": [],
+      "generate_ms": 122.6261,
+      "generated_tokens": 7,
+      "id": "c18",
+      "ja": "これ、絶対罠でしょ。",
+      "lang": "en",
+      "ms": 149.4665,
+      "output": "This is definitely a trap.",
+      "prompt_ms": 26.6161,
+      "prompt_tokens": 431,
+      "raw": "This is definitely a trap.",
+      "reference": "This is definitely a trap, right?",
+      "sanitize_issue": null,
+      "tags": [
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 86.26917130700087,
+      "context": [],
+      "generate_ms": 91.7961,
+      "generated_tokens": 5,
+      "id": "c19",
+      "ja": "勝った！やったー！",
+      "lang": "en",
+      "ms": 112.18599999999999,
+      "output": "Won! Yay!",
+      "prompt_ms": 20.2551,
+      "prompt_tokens": 427,
+      "raw": "Won! Yay!",
+      "reference": "I won! Yay!",
+      "sanitize_issue": null,
+      "tags": [
+        "reaction"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 70.48529081408893,
+      "context": [],
+      "generate_ms": 143.5876,
+      "generated_tokens": 8,
+      "id": "c20",
+      "ja": "負けたくないんだけど。",
+      "lang": "en",
+      "ms": 164.0131,
+      "output": "I don't want to lose.",
+      "prompt_ms": 20.2701,
+      "prompt_tokens": 425,
+      "raw": "I don't want to lose.",
+      "reference": "I really don't want to lose.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 70.52913255037102,
+      "context": [],
+      "generate_ms": 181.2524,
+      "generated_tokens": 10,
+      "id": "c21",
+      "ja": "知らなかった、そんなの。",
+      "lang": "en",
+      "ms": 206.0713,
+      "output": "I didn't know, that's it.",
+      "prompt_ms": 24.651200000000003,
+      "prompt_tokens": 426,
+      "raw": "I didn't know, that's it.",
+      "reference": "I didn't know that.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "inverted-order"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 160.5292,
+      "generated_tokens": 9,
+      "id": "c22",
+      "ja": "それはぺこらのじゃないよ。",
+      "lang": "en",
+      "ms": 182.1586,
+      "output": "That's not Pekora's.",
+      "prompt_ms": 21.4772,
+      "prompt_tokens": 427,
+      "raw": "That's not Pekora's.",
+      "reference": "That's not Pekora's.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "name"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 74.31984429850299,
+      "context": [],
+      "generate_ms": 201.0053,
+      "generated_tokens": 11,
+      "id": "c23",
+      "ja": "明日も配信するから、見に来てね。",
+      "lang": "en",
+      "ms": 221.4884,
+      "output": "We'll be streaming tomorrow, so come watch.",
+      "prompt_ms": 20.3261,
+      "prompt_tokens": 432,
+      "raw": "We'll be streaming tomorrow, so come watch.",
+      "reference": "I'm streaming tomorrow too, so come watch.",
+      "sanitize_issue": null,
+      "tags": [
+        "stream"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 13.393848563813739,
+      "context": [],
+      "generate_ms": 215.1273,
+      "generated_tokens": 12,
+      "id": "c24",
+      "ja": "え、なんで？意味わかんない。",
+      "lang": "en",
+      "ms": 238.7194,
+      "output": "What's the deal? I don't get it.",
+      "prompt_ms": 23.4083,
+      "prompt_tokens": 428,
+      "raw": "What's the deal? I don't get it.",
+      "reference": "Huh, why? That makes no sense.",
+      "sanitize_issue": null,
+      "tags": [
+        "question",
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 56.68291235121373,
+      "context": [],
+      "generate_ms": 225.9801,
+      "generated_tokens": 13,
+      "id": "c25",
+      "ja": "ここで死んだら最初からやり直しだ。",
+      "lang": "en",
+      "ms": 258.2839,
+      "output": "If I die here, I'll have to start over.",
+      "prompt_ms": 32.1256,
+      "prompt_tokens": 430,
+      "raw": "If I die here, I'll have to start over.",
+      "reference": "If I die here, I have to start over from the beginning.",
+      "sanitize_issue": null,
+      "tags": [
+        "conditional",
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 70.79822625488261,
+      "context": [],
+      "generate_ms": 180.3078,
+      "generated_tokens": 10,
+      "id": "c26",
+      "ja": "先輩に怒られちゃった。",
+      "lang": "en",
+      "ms": 200.49130000000002,
+      "output": "Got scolded by the senpai.",
+      "prompt_ms": 20.021400000000003,
+      "prompt_tokens": 427,
+      "raw": "Got scolded by the senpai.",
+      "reference": "I got scolded by my senpai.",
+      "sanitize_issue": null,
+      "tags": [
+        "passive",
+        "subject"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 20.658449718964505,
+      "context": [],
+      "generate_ms": 146.7768,
+      "generated_tokens": 8,
+      "id": "c27",
+      "ja": "別に好きじゃないし。",
+      "lang": "en",
+      "ms": 167.47699999999998,
+      "output": "I don't really like it.",
+      "prompt_ms": 20.5468,
+      "prompt_tokens": 425,
+      "raw": "I don't really like it.",
+      "reference": "It's not like I like it or anything.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 51.679974514496536,
+      "context": [],
+      "generate_ms": 236.6568,
+      "generated_tokens": 13,
+      "id": "c28",
+      "ja": "お疲れぺこ！また明日！",
+      "lang": "en",
+      "ms": 256.4762,
+      "output": "Pekora, you're tired! See you tomorrow!",
+      "prompt_ms": 19.6705,
+      "prompt_tokens": 427,
+      "raw": "Pekora, you're tired! See you tomorrow!",
+      "reference": "Good work today, peko! See you tomorrow!",
+      "sanitize_issue": null,
+      "tags": [
+        "tic",
+        "greeting"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 83.37341128311564,
+      "context": [],
+      "generate_ms": 145.7925,
+      "generated_tokens": 8,
+      "id": "c29",
+      "ja": "ボス強すぎるんだけど。",
+      "lang": "en",
+      "ms": 165.79569999999998,
+      "output": "The boss is way too strong.",
+      "prompt_ms": 19.8143,
+      "prompt_tokens": 425,
+      "raw": "The boss is way too strong.",
+      "reference": "This boss is way too strong.",
+      "sanitize_issue": null,
+      "tags": [
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 78.42303683682754,
+      "context": [],
+      "generate_ms": 144.76420000000002,
+      "generated_tokens": 8,
+      "id": "c30",
+      "ja": "まだ一回も勝ってない。",
+      "lang": "en",
+      "ms": 165.53570000000002,
+      "output": "We haven't won even once.",
+      "prompt_ms": 20.5796,
+      "prompt_tokens": 427,
+      "raw": "We haven't won even once.",
+      "reference": "I haven't won even once yet.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 39.93925621976777,
+      "context": [],
+      "generate_ms": 178.7581,
+      "generated_tokens": 10,
+      "id": "c31",
+      "ja": "スパチャありがとう、助かる！",
+      "lang": "en",
+      "ms": 205.4918,
+      "output": "Thanks to superchat, it's helpful!",
+      "prompt_ms": 26.5739,
+      "prompt_tokens": 426,
+      "raw": "Thanks to superchat, it's helpful!",
+      "reference": "Thanks for the superchat, that really helps!",
+      "sanitize_issue": null,
+      "tags": [
+        "chat"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 200.3217,
+      "generated_tokens": 11,
+      "id": "c32",
+      "ja": "あ、そこ宝箱あるじゃん。",
+      "lang": "en",
+      "ms": 220.23760000000001,
+      "output": "Oh, there's a treasure chest right there.",
+      "prompt_ms": 19.7674,
+      "prompt_tokens": 428,
+      "raw": "Oh, there's a treasure chest right there.",
+      "reference": "Oh, there's a treasure chest right there.",
+      "sanitize_issue": null,
+      "tags": [
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 41.30831516943644,
+      "context": [],
+      "generate_ms": 122.5002,
+      "generated_tokens": 7,
+      "id": "c33",
+      "ja": "行けると思ったのに。",
+      "lang": "en",
+      "ms": 148.9124,
+      "output": "I thought we could go.",
+      "prompt_ms": 26.261799999999997,
+      "prompt_tokens": 424,
+      "raw": "I thought we could go.",
+      "reference": "I thought I could make it...",
+      "sanitize_issue": null,
+      "tags": [
+        "fragment"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 31.759211651804122,
+      "context": [],
+      "generate_ms": 146.1233,
+      "generated_tokens": 8,
+      "id": "c34",
+      "ja": "嘘でしょ、また落ちた。",
+      "lang": "en",
+      "ms": 170.7051,
+      "output": "Lie, it's fallen again.",
+      "prompt_ms": 24.4215,
+      "prompt_tokens": 429,
+      "raw": "Lie, it's fallen again.",
+      "reference": "No way, I fell again.",
+      "sanitize_issue": null,
+      "tags": [
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 57.50339591379778,
+      "context": [],
+      "generate_ms": 199.5364,
+      "generated_tokens": 11,
+      "id": "c35",
+      "ja": "声が聞こえないって？マイク大丈夫？",
+      "lang": "en",
+      "ms": 222.042,
+      "output": "Can you hear me? Is the mic okay?",
+      "prompt_ms": 22.3407,
+      "prompt_tokens": 432,
+      "raw": "Can you hear me? Is the mic okay?",
+      "reference": "You can't hear my voice? Is the mic okay?",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "question"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 91.6497,
+      "generated_tokens": 5,
+      "id": "c36",
+      "ja": "笑わないでよ！",
+      "lang": "en",
+      "ms": 111.23089999999999,
+      "output": "Don't laugh!",
+      "prompt_ms": 19.422600000000003,
+      "prompt_tokens": 424,
+      "raw": "Don't laugh!",
+      "reference": "Don't laugh!",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "imperative"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 33.03330589979836,
+      "context": [],
+      "generate_ms": 199.87750000000003,
+      "generated_tokens": 11,
+      "id": "c37",
+      "ja": "ホロライブの3期生です。",
+      "lang": "en",
+      "ms": 221.24450000000002,
+      "output": "I'm a third-year Hololive member.",
+      "prompt_ms": 21.1963,
+      "prompt_tokens": 428,
+      "raw": "I'm a third-year Hololive member.",
+      "reference": "I'm part of hololive's third generation.",
+      "sanitize_issue": null,
+      "tags": [
+        "name"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 40.53485534874702,
+      "context": [],
+      "generate_ms": 201.2781,
+      "generated_tokens": 11,
+      "id": "c38",
+      "ja": "次は失敗しないから見てて。",
+      "lang": "en",
+      "ms": 221.5172,
+      "output": "Watch this, it won't fail next time.",
+      "prompt_ms": 20.0948,
+      "prompt_tokens": 429,
+      "raw": "Watch this, it won't fail next time.",
+      "reference": "I won't mess up next time, so watch.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "future"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 42.71316494680797,
+      "context": [],
+      "generate_ms": 180.8594,
+      "generated_tokens": 10,
+      "id": "c39",
+      "ja": "この敵、倒さなくてもいいよ。",
+      "lang": "en",
+      "ms": 202.45469999999997,
+      "output": "This enemy doesn't need to be defeated.",
+      "prompt_ms": 21.4064,
+      "prompt_tokens": 427,
+      "raw": "This enemy doesn't need to be defeated.",
+      "reference": "You don't have to defeat this enemy.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "permission"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 36.62795724507504,
+      "context": [],
+      "generate_ms": 144.0139,
+      "generated_tokens": 8,
+      "id": "c40",
+      "ja": "えっと、何の話だっけ？",
+      "lang": "en",
+      "ms": 167.6184,
+      "output": "Hmm, what was that about?",
+      "prompt_ms": 23.4581,
+      "prompt_tokens": 429,
+      "raw": "Hmm, what was that about?",
+      "reference": "Um, what were we talking about?",
+      "sanitize_issue": null,
+      "tags": [
+        "question"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 61.858930218518374,
+      "context": [],
+      "generate_ms": 183.0326,
+      "generated_tokens": 10,
+      "id": "p1a",
+      "ja": "昨日マリン船長とコラボしたんだけど、",
+      "lang": "en",
+      "ms": 205.9265,
+      "output": "I collaborated with Captain Marine yesterday, but...",
+      "prompt_ms": 22.7498,
+      "prompt_tokens": 432,
+      "raw": "I collaborated with Captain Marine yesterday, but...",
+      "reference": "Yesterday I did a collab with Captain Marine, and...",
+      "sanitize_issue": null,
+      "tags": [
+        "fragment",
+        "name"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 22.295669767741895,
+      "context": [
+        "昨日マリン船長とコラボしたんだけど、"
+      ],
+      "generate_ms": 233.6724,
+      "generated_tokens": 13,
+      "id": "p1b",
+      "ja": "めっちゃ楽しかった。",
+      "lang": "en",
+      "ms": 259.2446,
+      "output": "It was really fun collabing with Captain Marine yesterday.",
+      "prompt_ms": 25.4227,
+      "prompt_tokens": 440,
+      "raw": "It was really fun collabing with Captain Marine yesterday.",
+      "reference": "It was super fun.",
+      "sanitize_issue": null,
+      "tags": [
+        "context"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 41.917948278396885,
+      "context": [],
+      "generate_ms": 181.2207,
+      "generated_tokens": 10,
+      "id": "p2a",
+      "ja": "このゲーム、前にもやったことあるんだよね。",
+      "lang": "en",
+      "ms": 203.1859,
+      "output": "This game has been played before, right?",
+      "prompt_ms": 21.8308,
+      "prompt_tokens": 430,
+      "raw": "This game has been played before, right?",
+      "reference": "I've actually played this game before.",
+      "sanitize_issue": null,
+      "tags": [
+        "experience"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 80.73325619207007,
+      "context": [
+        "このゲーム、前にもやったことあるんだよね。"
+      ],
+      "generate_ms": 169.8946,
+      "generated_tokens": 9,
+      "id": "p2b",
+      "ja": "でも全然覚えてない。",
+      "lang": "en",
+      "ms": 191.3686,
+      "output": "But I don't remember at all.",
+      "prompt_ms": 21.3445,
+      "prompt_tokens": 440,
+      "raw": "But I don't remember at all.",
+      "reference": "But I don't remember it at all.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "context"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 63.14070034794602,
+      "context": [],
+      "generate_ms": 144.3334,
+      "generated_tokens": 8,
+      "id": "p3a",
+      "ja": "犯人はたぶんあの人だと思う。",
+      "lang": "en",
+      "ms": 169.03580000000002,
+      "output": "The criminal is probably that person.",
+      "prompt_ms": 24.4577,
+      "prompt_tokens": 429,
+      "raw": "The criminal is probably that person.",
+      "reference": "I think the culprit is probably that person.",
+      "sanitize_issue": null,
+      "tags": [
+        "opinion"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 100.0,
+      "context": [
+        "犯人はたぶんあの人だと思う。"
+      ],
+      "generate_ms": 109.6432,
+      "generated_tokens": 6,
+      "id": "p3b",
+      "ja": "いや、違うかも。",
+      "lang": "en",
+      "ms": 135.4014,
+      "output": "No, maybe not.",
+      "prompt_ms": 25.581,
+      "prompt_tokens": 435,
+      "raw": "No, maybe not.",
+      "reference": "No, maybe not.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "context"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 35.34470434349983,
+      "context": [],
+      "generate_ms": 92.9668,
+      "generated_tokens": 5,
+      "id": "p4a",
+      "ja": "宿題やった？",
+      "lang": "en",
+      "ms": 115.4318,
+      "output": "Homework done?",
+      "prompt_ms": 22.265,
+      "prompt_tokens": 424,
+      "raw": "Homework done?",
+      "reference": "Did you do your homework?",
+      "sanitize_issue": null,
+      "tags": [
+        "question"
+      ]
+    },
+    {
+      "cached_tokens": 404,
+      "chrf": 64.10950884097782,
+      "context": [
+        "宿題やった？"
+      ],
+      "generate_ms": 163.02929999999998,
+      "generated_tokens": 9,
+      "id": "p4b",
+      "ja": "まだやってない。",
+      "lang": "en",
+      "ms": 187.9943,
+      "output": "I haven't done my homework yet.",
+      "prompt_ms": 24.8171,
+      "prompt_tokens": 430,
+      "raw": "I haven't done my homework yet.",
+      "reference": "I haven't done it yet.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "context"
+      ]
+    },
+    {
+      "cached_tokens": 0,
+      "chrf": 58.46431419820683,
+      "context": [],
+      "generate_ms": 217.5646,
+      "generated_tokens": 12,
+      "id": "c01",
+      "ja": "ぺこらは今日ホラーゲームやらないよ。",
+      "lang": "es",
+      "ms": 439.1157,
+      "output": "Pekora no juega juegos de terror hoy.",
+      "prompt_ms": 221.4049,
+      "prompt_tokens": 454,
+      "raw": "Pekora no juega juegos de terror hoy.",
+      "reference": "Pekora no va a jugar un juego de terror hoy.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "self-name",
+        "name"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 69.18227191197558,
+      "context": [],
+      "generate_ms": 198.5782,
+      "generated_tokens": 11,
+      "id": "c02",
+      "ja": "え、待って、それ本当？",
+      "lang": "es",
+      "ms": 220.2952,
+      "output": "¿Eh, espera, eso es verdad?",
+      "prompt_ms": 21.5896,
+      "prompt_tokens": 448,
+      "raw": "¿Eh, espera, eso es verdad?",
+      "reference": "¿Eh? Espera, ¿eso es verdad?",
+      "sanitize_issue": null,
+      "tags": [
+        "question",
+        "interjection"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 13.18346836675964,
+      "context": [],
+      "generate_ms": 368.4418,
+      "generated_tokens": 20,
+      "id": "c03",
+      "ja": "やばいやばいやばい、死ぬ死ぬ！",
+      "lang": "es",
+      "ms": 390.20050000000003,
+      "output": "¡Mierda, mierda, mierda, ¡mato a alguien!",
+      "prompt_ms": 21.61,
+      "prompt_tokens": 453,
+      "raw": "¡Mierda, mierda, mierda, ¡mato a alguien!",
+      "reference": "¡No, no, no, me muero, me muero!",
+      "sanitize_issue": null,
+      "tags": [
+        "reaction",
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 28.85517336894775,
+      "context": [],
+      "generate_ms": 135.6182,
+      "generated_tokens": 7,
+      "id": "c04",
+      "ja": "全然怖くないし。",
+      "lang": "es",
+      "ms": 159.797,
+      "output": "No es nada temido.",
+      "prompt_ms": 22.961599999999997,
+      "prompt_tokens": 447,
+      "raw": "No es nada temido.",
+      "reference": "No da nada de miedo.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 35.70458584176942,
+      "context": [],
+      "generate_ms": 201.7426,
+      "generated_tokens": 11,
+      "id": "c05",
+      "ja": "怖くないわけじゃないけど、大丈夫。",
+      "lang": "es",
+      "ms": 276.15139999999997,
+      "output": "Aunque no es miedo, está bien.",
+      "prompt_ms": 73.4848,
+      "prompt_tokens": 450,
+      "raw": "Aunque no es miedo, está bien.",
+      "reference": "No es que no tenga miedo, pero estoy bien.",
+      "sanitize_issue": null,
+      "tags": [
+        "double-negation"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 64.9103134304023,
+      "context": [],
+      "generate_ms": 244.8173,
+      "generated_tokens": 13,
+      "id": "c06",
+      "ja": "まだ行かないで、ちょっと待って。",
+      "lang": "es",
+      "ms": 271.5536,
+      "output": "¡Espera un momento, no te vayas!",
+      "prompt_ms": 26.5765,
+      "prompt_tokens": 449,
+      "raw": "¡Espera un momento, no te vayas!",
+      "reference": "No te vayas todavía, espera un momento.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "imperative"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 74.71741610579332,
+      "context": [],
+      "generate_ms": 161.2584,
+      "generated_tokens": 9,
+      "id": "c07",
+      "ja": "みんな、コメントありがとう！",
+      "lang": "es",
+      "ms": 194.2275,
+      "output": "¡Gracias a todos los comentarios!",
+      "prompt_ms": 32.8147,
+      "prompt_tokens": 445,
+      "raw": "¡Gracias a todos los comentarios!",
+      "reference": "¡Gracias por los comentarios a todos!",
+      "sanitize_issue": null,
+      "tags": [
+        "chat"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 72.4726165627309,
+      "context": [],
+      "generate_ms": 255.4095,
+      "generated_tokens": 14,
+      "id": "c08",
+      "ja": "今日は新しいゲームをやっていくぺこ。",
+      "lang": "es",
+      "ms": 283.84090000000003,
+      "output": "¡Hoy vamos a jugar un nuevo juego, peko!",
+      "prompt_ms": 28.2792,
+      "prompt_tokens": 449,
+      "raw": "¡Hoy vamos a jugar un nuevo juego, peko!",
+      "reference": "Hoy vamos a jugar un juego nuevo, peko.",
+      "sanitize_issue": null,
+      "tags": [
+        "name",
+        "tic"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 66.62796530080868,
+      "context": [],
+      "generate_ms": 199.6123,
+      "generated_tokens": 11,
+      "id": "c09",
+      "ja": "それはマリン船長のせいだよ。",
+      "lang": "es",
+      "ms": 230.3352,
+      "output": "Eso es culpa del Capitán Marine.",
+      "prompt_ms": 30.5741,
+      "prompt_tokens": 450,
+      "raw": "Eso es culpa del Capitán Marine.",
+      "reference": "Eso es culpa de la capitana Marine.",
+      "sanitize_issue": null,
+      "tags": [
+        "name",
+        "subject"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 125.498,
+      "generated_tokens": 7,
+      "id": "c10",
+      "ja": "誰がそんなこと言ったの？",
+      "lang": "es",
+      "ms": 149.565,
+      "output": "¿Quién dijo eso?",
+      "prompt_ms": 23.9272,
+      "prompt_tokens": 448,
+      "raw": "¿Quién dijo eso?",
+      "reference": "¿Quién dijo eso?",
+      "sanitize_issue": null,
+      "tags": [
+        "question"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 18.108219740509412,
+      "context": [],
+      "generate_ms": 166.0803,
+      "generated_tokens": 9,
+      "id": "c11",
+      "ja": "もう二度とやらない。",
+      "lang": "es",
+      "ms": 191.8234,
+      "output": "Ya no lo haré de nuevo.",
+      "prompt_ms": 25.5883,
+      "prompt_tokens": 448,
+      "raw": "Ya no lo haré de nuevo.",
+      "reference": "No lo vuelvo a hacer nunca más.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 39.641945959670416,
+      "context": [],
+      "generate_ms": 221.9405,
+      "generated_tokens": 12,
+      "id": "c12",
+      "ja": "あれ、ドアが開かない。",
+      "lang": "es",
+      "ms": 247.3714,
+      "output": "¿Eh, el portón no se abre?",
+      "prompt_ms": 25.2696,
+      "prompt_tokens": 448,
+      "raw": "¿Eh, el portón no se abre?",
+      "reference": "¿Eh? La puerta no se abre.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 25.22158714765256,
+      "context": [],
+      "generate_ms": 199.4894,
+      "generated_tokens": 11,
+      "id": "c13",
+      "ja": "鍵を取ってから戻ろう。",
+      "lang": "es",
+      "ms": 222.918,
+      "output": "¡Voy a tomar la llave primero!",
+      "prompt_ms": 23.2793,
+      "prompt_tokens": 450,
+      "raw": "¡Voy a tomar la llave primero!",
+      "reference": "Tomemos la llave y después volvamos.",
+      "sanitize_issue": null,
+      "tags": [
+        "action",
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 38.448068288245665,
+      "context": [],
+      "generate_ms": 166.5156,
+      "generated_tokens": 9,
+      "id": "c14",
+      "ja": "左だって言ったじゃん！",
+      "lang": "es",
+      "ms": 186.92909999999998,
+      "output": "¡Izquierda, dije!",
+      "prompt_ms": 20.2734,
+      "prompt_tokens": 446,
+      "raw": "¡Izquierda, dije!",
+      "reference": "¡Te dije que era a la izquierda!",
+      "sanitize_issue": null,
+      "tags": [
+        "subject"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 16.60109075620685,
+      "context": [],
+      "generate_ms": 144.5122,
+      "generated_tokens": 8,
+      "id": "c15",
+      "ja": "ちょっと音大きすぎない？",
+      "lang": "es",
+      "ms": 169.5473,
+      "output": "¿Un poco too fuerte?",
+      "prompt_ms": 24.8689,
+      "prompt_tokens": 446,
+      "raw": "¿Un poco too fuerte?",
+      "reference": "¿No está el sonido un poco demasiado alto?",
+      "sanitize_issue": null,
+      "tags": [
+        "negative-question"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 57.318347697558366,
+      "context": [],
+      "generate_ms": 235.0273,
+      "generated_tokens": 13,
+      "id": "c16",
+      "ja": "配信始めるの遅れてごめんね。",
+      "lang": "es",
+      "ms": 260.88169999999997,
+      "output": "Lo siento, empecé tarde la transmisión.",
+      "prompt_ms": 25.7032,
+      "prompt_tokens": 453,
+      "raw": "Lo siento, empecé tarde la transmisión.",
+      "reference": "Perdón por empezar tarde la transmisión.",
+      "sanitize_issue": null,
+      "tags": [
+        "stream"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 34.848469801527216,
+      "context": [],
+      "generate_ms": 368.7296,
+      "generated_tokens": 20,
+      "id": "c17",
+      "ja": "お腹すいたから、ちょっと休憩する。",
+      "lang": "es",
+      "ms": 389.958,
+      "output": "Me siento hambriento, así que un momento, tomaré una pausa.",
+      "prompt_ms": 21.068900000000003,
+      "prompt_tokens": 451,
+      "raw": "Me siento hambriento, así que un momento, tomaré una pausa.",
+      "reference": "Tengo hambre, así que voy a tomar un descansito.",
+      "sanitize_issue": null,
+      "tags": [
+        "cause"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 38.16518623804927,
+      "context": [],
+      "generate_ms": 185.3662,
+      "generated_tokens": 10,
+      "id": "c18",
+      "ja": "これ、絶対罠でしょ。",
+      "lang": "es",
+      "ms": 208.40900000000002,
+      "output": "¡Definitivamente es una trampa!",
+      "prompt_ms": 22.8905,
+      "prompt_tokens": 452,
+      "raw": "¡Definitivamente es una trampa!",
+      "reference": "Esto seguro que es una trampa, ¿no?",
+      "sanitize_issue": null,
+      "tags": [
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 81.77503970115237,
+      "context": [],
+      "generate_ms": 179.4758,
+      "generated_tokens": 10,
+      "id": "c19",
+      "ja": "勝った！やったー！",
+      "lang": "es",
+      "ms": 204.9183,
+      "output": "¡Gané! ¡Bien hecho!",
+      "prompt_ms": 25.294,
+      "prompt_tokens": 448,
+      "raw": "¡Gané! ¡Bien hecho!",
+      "reference": "¡Gané! ¡Bien!",
+      "sanitize_issue": null,
+      "tags": [
+        "reaction"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 69.43759430315419,
+      "context": [],
+      "generate_ms": 110.6979,
+      "generated_tokens": 6,
+      "id": "c20",
+      "ja": "負けたくないんだけど。",
+      "lang": "es",
+      "ms": 132.0482,
+      "output": "No quiero perderme.",
+      "prompt_ms": 21.2014,
+      "prompt_tokens": 446,
+      "raw": "No quiero perderme.",
+      "reference": "Es que no quiero perder.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 109.5767,
+      "generated_tokens": 6,
+      "id": "c21",
+      "ja": "知らなかった、そんなの。",
+      "lang": "es",
+      "ms": 134.09550000000002,
+      "output": "No sabía eso.",
+      "prompt_ms": 24.3866,
+      "prompt_tokens": 447,
+      "raw": "No sabía eso.",
+      "reference": "No sabía eso.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "inverted-order"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 80.87957017401561,
+      "context": [],
+      "generate_ms": 161.36690000000002,
+      "generated_tokens": 9,
+      "id": "c22",
+      "ja": "それはぺこらのじゃないよ。",
+      "lang": "es",
+      "ms": 188.9858,
+      "output": "Eso no es de peko.",
+      "prompt_ms": 27.4551,
+      "prompt_tokens": 448,
+      "raw": "Eso no es de peko.",
+      "reference": "Eso no es de Pekora.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "name"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 34.06242211638318,
+      "context": [],
+      "generate_ms": 233.8486,
+      "generated_tokens": 13,
+      "id": "c23",
+      "ja": "明日も配信するから、見に来てね。",
+      "lang": "es",
+      "ms": 259.86150000000004,
+      "output": "Por favor, ven a ver la transmisión de mañana.",
+      "prompt_ms": 25.8457,
+      "prompt_tokens": 453,
+      "raw": "Por favor, ven a ver la transmisión de mañana.",
+      "reference": "Mañana también voy a transmitir, así que vengan a ver.",
+      "sanitize_issue": null,
+      "tags": [
+        "stream"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 57.35894925807513,
+      "context": [],
+      "generate_ms": 278.1984,
+      "generated_tokens": 15,
+      "id": "c24",
+      "ja": "え、なんで？意味わかんない。",
+      "lang": "es",
+      "ms": 299.0719,
+      "output": "¿Eh, por qué? No entiendo el significado.",
+      "prompt_ms": 20.7078,
+      "prompt_tokens": 449,
+      "raw": "¿Eh, por qué? No entiendo el significado.",
+      "reference": "¿Eh, por qué? No tiene sentido.",
+      "sanitize_issue": null,
+      "tags": [
+        "question",
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 53.27910897695571,
+      "context": [],
+      "generate_ms": 274.88649999999996,
+      "generated_tokens": 15,
+      "id": "c25",
+      "ja": "ここで死んだら最初からやり直しだ。",
+      "lang": "es",
+      "ms": 299.9785,
+      "output": "Si mueres aquí, tendrás que empezar de nuevo.",
+      "prompt_ms": 24.9446,
+      "prompt_tokens": 451,
+      "raw": "Si mueres aquí, tendrás que empezar de nuevo.",
+      "reference": "Si muero aquí, tengo que empezar de nuevo desde el principio.",
+      "sanitize_issue": null,
+      "tags": [
+        "conditional",
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 29.599422850480757,
+      "context": [],
+      "generate_ms": 184.2624,
+      "generated_tokens": 10,
+      "id": "c26",
+      "ja": "先輩に怒られちゃった。",
+      "lang": "es",
+      "ms": 210.55599999999998,
+      "output": "Se me enojó la senpai.",
+      "prompt_ms": 26.1481,
+      "prompt_tokens": 448,
+      "raw": "Se me enojó la senpai.",
+      "reference": "Mi senpai me regañó.",
+      "sanitize_issue": null,
+      "tags": [
+        "passive",
+        "subject"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 27.47097139673114,
+      "context": [],
+      "generate_ms": 130.9899,
+      "generated_tokens": 7,
+      "id": "c27",
+      "ja": "別に好きじゃないし。",
+      "lang": "es",
+      "ms": 154.45010000000002,
+      "output": "No me gusta ni eso.",
+      "prompt_ms": 23.2769,
+      "prompt_tokens": 446,
+      "raw": "No me gusta ni eso.",
+      "reference": "Tampoco es que me guste.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 27.41516351856183,
+      "context": [],
+      "generate_ms": 205.8123,
+      "generated_tokens": 11,
+      "id": "c28",
+      "ja": "お疲れぺこ！また明日！",
+      "lang": "es",
+      "ms": 228.8985,
+      "output": "¡Pekora, te veo mañana!",
+      "prompt_ms": 22.7949,
+      "prompt_tokens": 448,
+      "raw": "¡Pekora, te veo mañana!",
+      "reference": "¡Buen trabajo, peko! ¡Hasta mañana!",
+      "sanitize_issue": null,
+      "tags": [
+        "tic",
+        "greeting"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 68.22058642150762,
+      "context": [],
+      "generate_ms": 166.8808,
+      "generated_tokens": 9,
+      "id": "c29",
+      "ja": "ボス強すぎるんだけど。",
+      "lang": "es",
+      "ms": 190.1762,
+      "output": "El boss es demasiado fuerte.",
+      "prompt_ms": 23.125300000000003,
+      "prompt_tokens": 446,
+      "raw": "El boss es demasiado fuerte.",
+      "reference": "Este jefe es demasiado fuerte.",
+      "sanitize_issue": null,
+      "tags": [
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 73.19485173145408,
+      "context": [],
+      "generate_ms": 202.911,
+      "generated_tokens": 11,
+      "id": "c30",
+      "ja": "まだ一回も勝ってない。",
+      "lang": "es",
+      "ms": 224.0604,
+      "output": "Aún no he ganado ni una vez.",
+      "prompt_ms": 20.9964,
+      "prompt_tokens": 448,
+      "raw": "Aún no he ganado ni una vez.",
+      "reference": "Todavía no he ganado ni una vez.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 54.11613522170685,
+      "context": [],
+      "generate_ms": 221.1354,
+      "generated_tokens": 12,
+      "id": "c31",
+      "ja": "スパチャありがとう、助かる！",
+      "lang": "es",
+      "ms": 241.3262,
+      "output": "Gracias, superchat, me sirve mucho!",
+      "prompt_ms": 20.0512,
+      "prompt_tokens": 447,
+      "raw": "Gracias, superchat, me sirve mucho!",
+      "reference": "¡Gracias por el superchat, me ayuda mucho!",
+      "sanitize_issue": null,
+      "tags": [
+        "chat"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 22.89532748636898,
+      "context": [],
+      "generate_ms": 281.39799999999997,
+      "generated_tokens": 15,
+      "id": "c32",
+      "ja": "あ、そこ宝箱あるじゃん。",
+      "lang": "es",
+      "ms": 303.6768,
+      "output": "Ah, hay una caja de recompensas allí.",
+      "prompt_ms": 22.1231,
+      "prompt_tokens": 449,
+      "raw": "Ah, hay una caja de recompensas allí.",
+      "reference": "Ah, ahí hay un cofre del tesoro.",
+      "sanitize_issue": null,
+      "tags": [
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 32.662333043845294,
+      "context": [],
+      "generate_ms": 184.4207,
+      "generated_tokens": 10,
+      "id": "c33",
+      "ja": "行けると思ったのに。",
+      "lang": "es",
+      "ms": 206.81740000000002,
+      "output": "Pensé que podíamos ir.",
+      "prompt_ms": 22.2598,
+      "prompt_tokens": 445,
+      "raw": "Pensé que podíamos ir.",
+      "reference": "Pensé que lo iba a lograr...",
+      "sanitize_issue": null,
+      "tags": [
+        "fragment"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 12.235462599176762,
+      "context": [],
+      "generate_ms": 239.7379,
+      "generated_tokens": 13,
+      "id": "c34",
+      "ja": "嘘でしょ、また落ちた。",
+      "lang": "es",
+      "ms": 260.1913,
+      "output": "¡Mentira, volvió a caer!",
+      "prompt_ms": 20.296000000000003,
+      "prompt_tokens": 450,
+      "raw": "¡Mentira, volvió a caer!",
+      "reference": "No puede ser, me caí otra vez.",
+      "sanitize_issue": null,
+      "tags": [
+        "game"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 60.51367680860621,
+      "context": [],
+      "generate_ms": 334.9214,
+      "generated_tokens": 18,
+      "id": "c35",
+      "ja": "声が聞こえないって？マイク大丈夫？",
+      "lang": "es",
+      "ms": 358.888,
+      "output": "¿El sonido no se escucha? ¿El micrófono está bien?",
+      "prompt_ms": 23.8115,
+      "prompt_tokens": 453,
+      "raw": "¿El sonido no se escucha? ¿El micrófono está bien?",
+      "reference": "¿Que no se escucha mi voz? ¿Está bien el micrófono?",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "question"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 20.619546247818494,
+      "context": [],
+      "generate_ms": 130.0229,
+      "generated_tokens": 7,
+      "id": "c36",
+      "ja": "笑わないでよ！",
+      "lang": "es",
+      "ms": 152.1817,
+      "output": "¡No ríe!",
+      "prompt_ms": 21.970799999999997,
+      "prompt_tokens": 445,
+      "raw": "¡No ríe!",
+      "reference": "¡No se rían!",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "imperative"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 277.3871,
+      "generated_tokens": 15,
+      "id": "c37",
+      "ja": "ホロライブの3期生です。",
+      "lang": "es",
+      "ms": 302.6425,
+      "output": "Soy de la tercera generación de hololive.",
+      "prompt_ms": 24.8605,
+      "prompt_tokens": 449,
+      "raw": "Soy de la tercera generación de hololive.",
+      "reference": "Soy de la tercera generación de hololive.",
+      "sanitize_issue": null,
+      "tags": [
+        "name"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 20.7779502035023,
+      "context": [],
+      "generate_ms": 186.4473,
+      "generated_tokens": 10,
+      "id": "c38",
+      "ja": "次は失敗しないから見てて。",
+      "lang": "es",
+      "ms": 207.0121,
+      "output": "Mira, esta vez no fallará.",
+      "prompt_ms": 20.3949,
+      "prompt_tokens": 450,
+      "raw": "Mira, esta vez no fallará.",
+      "reference": "La próxima no voy a fallar, así que miren.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "future"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 45.09456053463284,
+      "context": [],
+      "generate_ms": 221.6898,
+      "generated_tokens": 12,
+      "id": "c39",
+      "ja": "この敵、倒さなくてもいいよ。",
+      "lang": "es",
+      "ms": 243.26690000000002,
+      "output": "No es necesario vencer a este enemigo.",
+      "prompt_ms": 21.2946,
+      "prompt_tokens": 448,
+      "raw": "No es necesario vencer a este enemigo.",
+      "reference": "No hace falta derrotar a este enemigo.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "permission"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 31.03484017040246,
+      "context": [],
+      "generate_ms": 152.368,
+      "generated_tokens": 8,
+      "id": "c40",
+      "ja": "えっと、何の話だっけ？",
+      "lang": "es",
+      "ms": 178.0101,
+      "output": "¿De qué hablamos?",
+      "prompt_ms": 25.4839,
+      "prompt_tokens": 450,
+      "raw": "¿De qué hablamos?",
+      "reference": "Eh... ¿de qué estábamos hablando?",
+      "sanitize_issue": null,
+      "tags": [
+        "question"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 35.865573851516324,
+      "context": [],
+      "generate_ms": 280.8686,
+      "generated_tokens": 15,
+      "id": "p1a",
+      "ja": "昨日マリン船長とコラボしたんだけど、",
+      "lang": "es",
+      "ms": 302.5141,
+      "output": "Ayer colabore con el Capitán Marine, pero...",
+      "prompt_ms": 21.4709,
+      "prompt_tokens": 453,
+      "raw": "Ayer colabore con el Capitán Marine, pero...",
+      "reference": "Ayer hice una colaboración con la capitana Marine, y...",
+      "sanitize_issue": null,
+      "tags": [
+        "fragment",
+        "name"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 37.968557568543,
+      "context": [
+        "昨日マリン船長とコラボしたんだけど、"
+      ],
+      "generate_ms": 294.6383,
+      "generated_tokens": 16,
+      "id": "p1b",
+      "ja": "めっちゃ楽しかった。",
+      "lang": "es",
+      "ms": 318.8632,
+      "output": "Fue muy divertido colaborar con el capitán Marine ayer.",
+      "prompt_ms": 24.0791,
+      "prompt_tokens": 461,
+      "raw": "Fue muy divertido colaborar con el capitán Marine ayer.",
+      "reference": "Fue súper divertido.",
+      "sanitize_issue": null,
+      "tags": [
+        "context"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 42.788224289065795,
+      "context": [],
+      "generate_ms": 222.3752,
+      "generated_tokens": 12,
+      "id": "p2a",
+      "ja": "このゲーム、前にもやったことあるんだよね。",
+      "lang": "es",
+      "ms": 243.1623,
+      "output": "Este juego lo hicimos antes, ¿verdad?",
+      "prompt_ms": 20.6221,
+      "prompt_tokens": 451,
+      "raw": "Este juego lo hicimos antes, ¿verdad?",
+      "reference": "Ya jugué este juego antes, ¿sabes?",
+      "sanitize_issue": null,
+      "tags": [
+        "experience"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 59.57572228124704,
+      "context": [
+        "このゲーム、前にもやったことあるんだよね。"
+      ],
+      "generate_ms": 190.6659,
+      "generated_tokens": 10,
+      "id": "p2b",
+      "ja": "でも全然覚えてない。",
+      "lang": "es",
+      "ms": 210.8851,
+      "output": "Pero no me acuerdo en absoluto.",
+      "prompt_ms": 20.0718,
+      "prompt_tokens": 461,
+      "raw": "Pero no me acuerdo en absoluto.",
+      "reference": "Pero no me acuerdo para nada.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "context"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 67.92460722899135,
+      "context": [],
+      "generate_ms": 199.3338,
+      "generated_tokens": 11,
+      "id": "p3a",
+      "ja": "犯人はたぶんあの人だと思う。",
+      "lang": "es",
+      "ms": 226.5913,
+      "output": "Creo que el culpable es esa persona.",
+      "prompt_ms": 27.1188,
+      "prompt_tokens": 450,
+      "raw": "Creo que el culpable es esa persona.",
+      "reference": "Creo que el culpable probablemente es esa persona.",
+      "sanitize_issue": null,
+      "tags": [
+        "opinion"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 15.495228411498982,
+      "context": [
+        "犯人はたぶんあの人だと思う。"
+      ],
+      "generate_ms": 146.9634,
+      "generated_tokens": 8,
+      "id": "p3b",
+      "ja": "いや、違うかも。",
+      "lang": "es",
+      "ms": 170.0196,
+      "output": "No, podría ser alguien else.",
+      "prompt_ms": 22.9116,
+      "prompt_tokens": 456,
+      "raw": "No, podría ser alguien else.",
+      "reference": "No, tal vez no.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "context"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 100.0,
+      "context": [],
+      "generate_ms": 150.8915,
+      "generated_tokens": 8,
+      "id": "p4a",
+      "ja": "宿題やった？",
+      "lang": "es",
+      "ms": 171.6629,
+      "output": "¿Hiciste la tarea?",
+      "prompt_ms": 20.6176,
+      "prompt_tokens": 445,
+      "raw": "¿Hiciste la tarea?",
+      "reference": "¿Hiciste la tarea?",
+      "sanitize_issue": null,
+      "tags": [
+        "question"
+      ]
+    },
+    {
+      "cached_tokens": 425,
+      "chrf": 27.281961681349568,
+      "context": [
+        "宿題やった？"
+      ],
+      "generate_ms": 147.3237,
+      "generated_tokens": 8,
+      "id": "p4b",
+      "ja": "まだやってない。",
+      "lang": "es",
+      "ms": 168.82569999999998,
+      "output": "Aún no lo hice.",
+      "prompt_ms": 21.3472,
+      "prompt_tokens": 451,
+      "raw": "Aún no lo hice.",
+      "reference": "Todavía no la hice.",
+      "sanitize_issue": null,
+      "tags": [
+        "negation",
+        "context"
+      ]
+    }
+  ]
+}

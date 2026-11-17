@@ -1,0 +1,805 @@
+{
+  "model": "C:\\Users\\jhvan\\AppData\\Local\\KikoeLive\\models\\Qwen3.5-4B-Q4_K_M.gguf",
+  "results": [
+    {
+      "cached_tokens": 0,
+      "chrf": 34.217619621277166,
+      "context": [],
+      "generate_ms": 755.4384,
+      "generated_tokens": 34,
+      "id": "f1510",
+      "ja": "また、国連では、地球温暖化の影響を被っている国々がその影響に対処できるように支援するための基金について最終決定したいと考えています。",
+      "lang": "es",
+      "ms": 1138.8655999999999,
+      "output": "Quiero llegar a un acuerdo final sobre la creación de un fondo para apoyar a los países que están sufriendo los efectos del cambio climático, en la ONU.",
+      "prompt_ms": 383.1534,
+      "prompt_tokens": 616,
+      "raw": "Quiero llegar a un acuerdo final sobre la creación de un fondo para apoyar a los países que están sufriendo los efectos del cambio climático, en la ONU.",
+      "reference": "La ONU tiene la intención de completar un fondo de asistencia en favor de los países víctima de los efectos del calentamiento global, a fin de poder enfrentar su impacto.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 58.56253434999085,
+      "context": [],
+      "generate_ms": 427.79,
+      "generated_tokens": 18,
+      "id": "f1513",
+      "ja": "アルゼンチンは、世界最高のポロチームとポロ競技選手を擁することで有名です。",
+      "lang": "es",
+      "ms": 464.1539,
+      "output": "Argentina es famosa por tener el mejor equipo de fútbol y los mejores jugadores del mundo.",
+      "prompt_ms": 36.1093,
+      "prompt_tokens": 608,
+      "raw": "Argentina es famosa por tener el mejor equipo de fútbol y los mejores jugadores del mundo.",
+      "reference": "Argentina es famosa por contar con uno de los mejores equipos y los mejores jugadores de polo a nivel mundial.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 43.51681927685812,
+      "context": [],
+      "generate_ms": 879.2203,
+      "generated_tokens": 39,
+      "id": "f1516",
+      "ja": "場にふさわしい敬意を払い、尊厳と礼節をもって立ち振る舞ってください。ホロコーストやナチスについて冗談を言うなどもってのほかです。",
+      "lang": "es",
+      "ms": 916.479,
+      "output": "¡Ofrezca respeto digno al lugar y mantenga la dignidad y la cortesía. Está estrictamente prohibido hacer bromas sobre el Holocausto o los nazis.",
+      "prompt_ms": 33.17959999999999,
+      "prompt_tokens": 625,
+      "raw": "¡Ofrezca respeto digno al lugar y mantenga la dignidad y la cortesía. Está estrictamente prohibido hacer bromas sobre el Holocausto o los nazis.",
+      "reference": "Dele al lugar toda la dignidad, la solemnidad y el respeto que amerita. No bromee acerca del Holocausto o el nazismo.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 51.74497529290259,
+      "context": [],
+      "generate_ms": 507.2415999999999,
+      "generated_tokens": 22,
+      "id": "f1521",
+      "ja": "宇宙にある人工衛星は通話を受信して、ほぼ瞬時にそれを反映します。",
+      "lang": "es",
+      "ms": 536.5951,
+      "output": "Las satélites artificiales en el espacio reciben las llamadas y las reflejan casi instantáneamente.",
+      "prompt_ms": 29.0527,
+      "prompt_tokens": 605,
+      "raw": "Las satélites artificiales en el espacio reciben las llamadas y las reflejan casi instantáneamente.",
+      "reference": "El satélite en el espacio recibe la llamada y, luego, la refleja de vuelta casi de forma instantánea.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 52.097922000781416,
+      "context": [],
+      "generate_ms": 1336.2387,
+      "generated_tokens": 58,
+      "id": "f1524",
+      "ja": "メートル法の採用、絶対主義から共和主義への移行、愛国心、そして国は単独支配者ではなく国民のものであるという信念など、多くの社会的政治的影響がありました。",
+      "lang": "es",
+      "ms": 1369.5033999999998,
+      "output": "La adopción del sistema métrico, la transición del absolutismo al republicanismo, el patriotismo y la creencia de que el país no está bajo el dominio exclusivo de un gobernante sino que pertenece al pueblo, entre otros, tuvieron un gran impacto social y político.",
+      "prompt_ms": 33.0471,
+      "prompt_tokens": 624,
+      "raw": "La adopción del sistema métrico, la transición del absolutismo al republicanismo, el patriotismo y la creencia de que el país no está bajo el dominio exclusivo de un gobernante sino que pertenece al pueblo, entre otros, tuvieron un gran impacto social y político.",
+      "reference": "Son muchas sus consecuencias políticas y sociales, tales como el uso del sistema métrico, el desplazamiento del absolutismo hacia el republicanismo, el nacionalismo y la convicción de que el país pertenece al pueblo, y no a un solo soberano.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 34.59177702907104,
+      "context": [],
+      "generate_ms": 1455.41,
+      "generated_tokens": 62,
+      "id": "f1527",
+      "ja": "ポーランドの視覚障害者スキーヤー、マキエイ・クレツェルとガイドのアンナ・オガルジンスカはスーパーＧで13位に入賞した。韓国のパク・ジョンソークは、男子シッティング・スーパーＧで２４位に終わった。",
+      "lang": "es",
+      "ms": 1483.6339999999998,
+      "output": "El esquiator ciego polaco Makiya Kretschel, con su guía Anna Ogarzinska, se clasificó en el puesto 13 en el Super G. El coreano Park Jonsok terminó en el puesto 24 en el Super G masculino sentado.",
+      "prompt_ms": 28.0464,
+      "prompt_tokens": 650,
+      "raw": "El esquiator ciego polaco Makiya Kretschel, con su guía Anna Ogarzinska, se clasificó en el puesto 13 en el Super G. El coreano Park Jonsok terminó en el puesto 24 en el Super G masculino sentado.",
+      "reference": "El esquiador del grupo masculino con discapacidad visual, Maciej Krezel, y su guía, Anna Ogarzynska, de Polonia, terminaron en el decimotercer lugar en el Super-G. Jong Seork Park de Corea del Sur obtuvo el vigésimo cuarto puesto en el grupo masculino sentados.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 54.87465590110737,
+      "context": [],
+      "generate_ms": 558.9291,
+      "generated_tokens": 25,
+      "id": "f1530",
+      "ja": "ここは火曜日に伐採される予定だったが、裁判所による緊急判決によって救われました。",
+      "lang": "es",
+      "ms": 588.7563,
+      "output": "Aquí estaba programado para ser talado el martes, pero fue salvado por una sentencia de emergencia del tribunal.",
+      "prompt_ms": 29.6446,
+      "prompt_tokens": 606,
+      "raw": "Aquí estaba programado para ser talado el martes, pero fue salvado por una sentencia de emergencia del tribunal.",
+      "reference": "Su tala se había programado para el día martes, pero fue salvado después de un fallo judicial de emergencia.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 30.02151493960321,
+      "context": [],
+      "generate_ms": 952.9226,
+      "generated_tokens": 42,
+      "id": "f1534",
+      "ja": "「ティンブクトゥ」という地名は、簡単には行けない場所であることと相まって、エキゾチックで遠い土地の隠喩として使われるようになりました。",
+      "lang": "es",
+      "ms": 976.0858999999999,
+      "output": "El nombre del lugar \"Timbuktu\", junto con el hecho de que es un sitio difícil de alcanzar, se ha convertido en una metáfora para tierras exóticas y lejanas.",
+      "prompt_ms": 22.9958,
+      "prompt_tokens": 624,
+      "raw": "El nombre del lugar \"Timbuktu\", junto con el hecho de que es un sitio difícil de alcanzar, se ha convertido en una metáfora para tierras exóticas y lejanas.",
+      "reference": "Ello, sumado a que resulta relativamente inaccesible, ha dado a «Tombuctú» una imagen de tierra exótica y lejana.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 43.552973714319506,
+      "context": [],
+      "generate_ms": 550.2772,
+      "generated_tokens": 23,
+      "id": "f1537",
+      "ja": "暗闇の中にピラミッドが見え、開演前には沈黙の中でピラミッドを見学できます。",
+      "lang": "es",
+      "ms": 577.1051,
+      "output": "En la oscuridad se ve una pirámide; antes del inicio se puede visitarla en silencio.",
+      "prompt_ms": 26.6156,
+      "prompt_tokens": 612,
+      "raw": "En la oscuridad se ve una pirámide; antes del inicio se puede visitarla en silencio.",
+      "reference": "En la oscuridad, se pueden ver las pirámides y contemplarlas en silencio antes de que empiece el espectáculo.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 39.28746245833035,
+      "context": [],
+      "generate_ms": 819.59,
+      "generated_tokens": 34,
+      "id": "f1541",
+      "ja": "宅配業者は、急ぎの配達で高報酬を得ています。多くの場合、業務書類、商品、または緊急の修理に必要な交換部品などは短時間で届くことが重要です。",
+      "lang": "es",
+      "ms": 847.3418,
+      "output": "Los mensajeros obtienen una alta remuneración por entregas urgentes. Es importante que documentos, productos o repuestos de reparación urgente lleguen en poco tiempo.",
+      "prompt_ms": 27.5255,
+      "prompt_tokens": 624,
+      "raw": "Los mensajeros obtienen una alta remuneración por entregas urgentes. Es importante que documentos, productos o repuestos de reparación urgente lleguen en poco tiempo.",
+      "reference": "Se les paga muy bien a las empresas de mensajería por hacer entregas veloces. Con frecuencia, el tiempo es muy importante cuando se trata de documentos comerciales, mercadería o repuestos para reparaciones urgentes.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 20.729897865820625,
+      "context": [],
+      "generate_ms": 451.3872,
+      "generated_tokens": 20,
+      "id": "f1545",
+      "ja": "カレーは水分量に応じて「ドライ」か「ウェット」のどちらかに分類されます。",
+      "lang": "es",
+      "ms": 481.6055,
+      "output": "El curry se clasifica en \"dry\" o \"wet\" según su contenido de humedad.",
+      "prompt_ms": 30.0298,
+      "prompt_tokens": 606,
+      "raw": "El curry se clasifica en \"dry\" o \"wet\" según su contenido de humedad.",
+      "reference": "Podemos encontrar curry «seco» y «húmedo», en función del volumen de líquido.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 56.87558908768682,
+      "context": [],
+      "generate_ms": 544.6641,
+      "generated_tokens": 24,
+      "id": "f1548",
+      "ja": "何千マイルも離れた場所にいる相手に電話をかけると自動的に衛星を経由した通話になります。",
+      "lang": "es",
+      "ms": 577.5207,
+      "output": "Si llamas a alguien que está a miles de millas de distancia, automáticamente se establece una llamada vía satélite.",
+      "prompt_ms": 32.6579,
+      "prompt_tokens": 607,
+      "raw": "Si llamas a alguien que está a miles de millas de distancia, automáticamente se establece una llamada vía satélite.",
+      "reference": "Cuando uno se comunica con alguien que está a miles de millas de distancia, se está haciendo uso de un satélite.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 41.66924333592529,
+      "context": [],
+      "generate_ms": 378.9427,
+      "generated_tokens": 17,
+      "id": "f1552",
+      "ja": "プロット分析の結果は、公開サイトに掲載される予定です。",
+      "lang": "es",
+      "ms": 437.43199999999996,
+      "output": "Los resultados del análisis del prototipo se publicarán en el sitio web.",
+      "prompt_ms": 58.2532,
+      "prompt_tokens": 598,
+      "raw": "Los resultados del análisis del prototipo se publicarán en el sitio web.",
+      "reference": "El resultado del análisis de rastreo se dará a conocer en un sitio web de acceso libre.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 46.205629031939694,
+      "context": [],
+      "generate_ms": 1323.3868,
+      "generated_tokens": 55,
+      "id": "f1556",
+      "ja": "彼の1,000枚目の切手は、デビッド・クレッカー・エーレンストラールが2000年に発行した素晴らしい「スウェーデン国王たちの偉業」でギネスブックにも掲載されています。",
+      "lang": "es",
+      "ms": 1352.1987,
+      "output": "¡Su 1.000ª estampilla es el increíble \"Hazañas de los reyes de Suecia\", emitida por David Kleecker Ehrenstrahl en 2000 y registrada en el Libro de los Récords Guinness!",
+      "prompt_ms": 28.6295,
+      "prompt_tokens": 639,
+      "raw": "¡Su 1.000ª estampilla es el increíble \"Hazañas de los reyes de Suecia\", emitida por David Kleecker Ehrenstrahl en 2000 y registrada en el Libro de los Récords Guinness!",
+      "reference": "Incluido en el libro Guinness de los récords mundiales, su milésimo sello fue el formidable «Hazañas memorables de los reyes suecos» (David Klöcker Ehrenstrahl, año 2000).",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 33.937712508488765,
+      "context": [],
+      "generate_ms": 405.92479999999995,
+      "generated_tokens": 18,
+      "id": "f1560",
+      "ja": "流れから抜け出れば、泳いで戻るのはそれほど難しくありません。",
+      "lang": "es",
+      "ms": 430.1681,
+      "output": "Si te alejas de la corriente, nadar de vuelta no es tan difícil.",
+      "prompt_ms": 24.062900000000003,
+      "prompt_tokens": 601,
+      "raw": "Si te alejas de la corriente, nadar de vuelta no es tan difícil.",
+      "reference": "En cuanto logre escapar de la corriente, nadar de regreso no serán más complejo de lo habitual.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 31.914926325835573,
+      "context": [],
+      "generate_ms": 1703.1592,
+      "generated_tokens": 38,
+      "id": "f1563",
+      "ja": "研究者らは、この標本が若い恐竜の尻尾であるにもかかわらず、ひなの羽毛ではなく大人の羽毛が生えていることを示唆している。",
+      "lang": "es",
+      "ms": 1728.4556,
+      "output": "Los investigadores sugieren que, a pesar de que este fósil es la cola de un dinosaurio joven, crece plumas de adulto y no plumas de hinano.",
+      "prompt_ms": 24.8206,
+      "prompt_tokens": 616,
+      "raw": "Los investigadores sugieren que, a pesar de que este fósil es la cola de un dinosaurio joven, crece plumas de adulto y no plumas de hinano.",
+      "reference": "Las apreciaciones de los expertos fueron que, aun cuando se trata de la cola de un dinosaurio de corta edad, la muestra ilustra más el plumaje de un adulto que el de un polluelo.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 32.67564590341377,
+      "context": [],
+      "generate_ms": 636.0936,
+      "generated_tokens": 28,
+      "id": "f1566",
+      "ja": "しかし、こちらの商品の80%は中米諸国で関税をかけられていました。",
+      "lang": "es",
+      "ms": 662.3208999999999,
+      "output": "Sin embargo, el 80% de este producto estaba sujeto a aranceles en varios países de América Latina y el Caribe.",
+      "prompt_ms": 25.9182,
+      "prompt_tokens": 606,
+      "raw": "Sin embargo, el 80% de este producto estaba sujeto a aranceles en varios países de América Latina y el Caribe.",
+      "reference": "Aun así, los países de América Central gravaron con aranceles el ochenta por ciento de los productos que nosotros elaboramos. los tratamos a ustedes.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 56.07795037530654,
+      "context": [],
+      "generate_ms": 632.1902,
+      "generated_tokens": 28,
+      "id": "f1569",
+      "ja": "報告書の冒頭は、公開討論と中東政策について米国内のコンセンサス形成を嘆願する一節で始まっています。",
+      "lang": "es",
+      "ms": 664.1005,
+      "output": "El inicio del informe comienza con una petición sobre la formación de consenso en Estados Unidos respecto al debate público y la política del Medio Oriente.",
+      "prompt_ms": 31.708,
+      "prompt_tokens": 619,
+      "raw": "El inicio del informe comienza con una petición sobre la formación de consenso en Estados Unidos respecto al debate público y la política del Medio Oriente.",
+      "reference": "El informe comienza con un llamado a debate abierto y a formar un consenso en los Estados Unidos acerca de las políticas sobre el Oriente Medio.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 44.63108687318583,
+      "context": [],
+      "generate_ms": 499.0719,
+      "generated_tokens": 22,
+      "id": "f1572",
+      "ja": "その後2時間のうちに、さらに3つの爆弾が官庁施設の付近で爆発しました。",
+      "lang": "es",
+      "ms": 525.4293,
+      "output": "Después de eso, en dos horas, tres bombas explotaron cerca de las instalaciones gubernamentales.",
+      "prompt_ms": 26.1393,
+      "prompt_tokens": 606,
+      "raw": "Después de eso, en dos horas, tres bombas explotaron cerca de las instalaciones gubernamentales.",
+      "reference": "Otras tres bombas fueron detonadas en las inmediaciones de establecimientos gubernamentales en un tramo de dos horas.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 39.458847749878565,
+      "context": [],
+      "generate_ms": 606.7920999999999,
+      "generated_tokens": 25,
+      "id": "f1576",
+      "ja": "コースは一般に、ここで説明しているあらゆる問題についてはるかに詳細事項まで扱い、通常は実践的な演習もあります。",
+      "lang": "es",
+      "ms": 629.6182,
+      "output": "El curso cubre de manera general todos los detalles de los problemas explicados aquí, y normalmente incluye ejercicios prácticos.",
+      "prompt_ms": 22.6371,
+      "prompt_tokens": 613,
+      "raw": "El curso cubre de manera general todos los detalles de los problemas explicados aquí, y normalmente incluye ejercicios prácticos.",
+      "reference": "Normalmente, un curso abarcará todos los temas que se han tratado aquí con mucho más detalle y, en general, con experiencia práctica.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 42.594316993400575,
+      "context": [],
+      "generate_ms": 854.6648,
+      "generated_tokens": 37,
+      "id": "f1579",
+      "ja": "警告の内容は、現時点でイラクでどのような行動をとっても、宗派間抗争や暴力の拡大、あるいは混沌への滑落を阻止しうると保証できる者はいないというものでした。",
+      "lang": "es",
+      "ms": 880.3862,
+      "output": "El contenido de la advertencia es que, hasta el momento, nadie puede garantizar que cualquier acción tomada en Irak evitará las luchas sectarias, la violencia o el caos.",
+      "prompt_ms": 25.544500000000003,
+      "prompt_tokens": 629,
+      "raw": "El contenido de la advertencia es que, hasta el momento, nadie puede garantizar que cualquier acción tomada en Irak evitará las luchas sectarias, la violencia o el caos.",
+      "reference": "Advierte que nadie puede dar garantías de que alguna acción iraquí en este punto detendrá la lucha sectaria, la creciente violencia o una inclinación hacia el caos.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 0,
+      "chrf": 35.443590752523946,
+      "context": [],
+      "generate_ms": 1719.397,
+      "generated_tokens": 68,
+      "id": "f1583",
+      "ja": "彼女がこの結論に至ったのは、避妊薬が医学的に必要であると考えるよう促す多くの肯定的な意見や励ましが女男性双方から寄せられたためです。",
+      "lang": "es",
+      "ms": 2500.2097,
+      "output": "Ella llegó a esta conclusión porque recibió muchas opiniones positivas y aliento de hombres y mujeres que la instaron a pensar que la anticoncepción es médicamente necesaria.",
+      "prompt_ms": 780.2084000000001,
+      "prompt_tokens": 1346,
+      "raw": "Ella llegó a esta conclusión porque recibió muchas opiniones positivas y aliento de hombres y mujeres que la instaron a pensar que la anticoncepción es médicamente necesaria.",
+      "reference": "Concluyó esto en base al gran número de comentarios positivos y alentadores de parte de mujeres y hombres instando a que los medicamentos anticonceptivos fueran considerados como una necesidad sanitaria.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 54.824352663131,
+      "context": [],
+      "generate_ms": 907.2272,
+      "generated_tokens": 40,
+      "id": "f1586",
+      "ja": "最初のレースはスラロームでしたが、彼女は最初の滑走でリタイア（Did Not Finish）となりました。このレースでは116人の選手のうち36人が同じ結果となりました。",
+      "lang": "es",
+      "ms": 943.0548,
+      "output": "La primera carrera fue un slalom, pero ella se retiró en el primer intento. En esta carrera, 36 de los 116 participantes obtuvieron el mismo resultado.",
+      "prompt_ms": 35.4807,
+      "prompt_tokens": 627,
+      "raw": "La primera carrera fue un slalom, pero ella se retiró en el primer intento. En esta carrera, 36 de los 116 participantes obtuvieron el mismo resultado.",
+      "reference": "El primero fue el slalom, en el que obtuvo un «No Terminó la primera carrera», al igual que 36 de los 116 participantes de esa carrera.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 37.193377861355714,
+      "context": [],
+      "generate_ms": 868.4325,
+      "generated_tokens": 38,
+      "id": "f1589",
+      "ja": "サブカルチャーの特徴を決定付ける性質は、言語、美、宗教、政治、性、地理、またはそれらの要素の組み合わせかもしれません。",
+      "lang": "es",
+      "ms": 897.8399999999999,
+      "output": "Las características que definen la subcultura podrían ser el lenguaje, la belleza, la religión, la política, el sexo, la geografía o una combinación de estos elementos.",
+      "prompt_ms": 29.1912,
+      "prompt_tokens": 617,
+      "raw": "Las características que definen la subcultura podrían ser el lenguaje, la belleza, la religión, la política, el sexo, la geografía o una combinación de estos elementos.",
+      "reference": "Los rasgos que distinguen a una subcultura pueden ser lingüísticos, estéticos, sexuales, geográficos o estar relacionados con la religión o la política, o una mezcla de factores.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 42.981565484658404,
+      "context": [],
+      "generate_ms": 725.9124999999999,
+      "generated_tokens": 32,
+      "id": "f1592",
+      "ja": "初めての海外旅行なら、おそらく周囲の人たちは辛抱強く、理解しようとする気持ちで対応してくれるでしょう。旅行者に慣れが必要だと知っているからです。",
+      "lang": "es",
+      "ms": 756.42,
+      "output": "Si es tu primera viaje internacional, probablemente las personas a tu alrededor te tratarán con paciencia y comprensión, porque saben que necesitas acostumbrarte a viajar.",
+      "prompt_ms": 30.2987,
+      "prompt_tokens": 618,
+      "raw": "Si es tu primera viaje internacional, probablemente las personas a tu alrededor te tratarán con paciencia y comprensión, porque saben que necesitas acostumbrarte a viajar.",
+      "reference": "Cuando usted viajó al extranjero la primera vez, las personas probablemente fueron pacientes y comprensivas, pues sabían que los viajeros necesitan adaptarse a un nuevo país.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 54.84205574864116,
+      "context": [],
+      "generate_ms": 923.0539,
+      "generated_tokens": 41,
+      "id": "f1595",
+      "ja": "チベット仏教はブッダの教えに基づく信仰ですが、大乗仏教の慈悲やインドのヨガから多くの技術を取り入れて拡張されています。",
+      "lang": "es",
+      "ms": 949.7461000000001,
+      "output": "El budismo tibetano se basa en los enseñanzas de Buda, pero se ha expandido incorporando la compasión del budismo mahayana y técnicas de yoga de la India.",
+      "prompt_ms": 26.4979,
+      "prompt_tokens": 618,
+      "raw": "El budismo tibetano se basa en los enseñanzas de Buda, pero se ha expandido incorporando la compasión del budismo mahayana y técnicas de yoga de la India.",
+      "reference": "Si bien las bases del budismo tibetano son las enseñanzas de Buda, se extendieron por el sendero del amor Mahayana y numerosas técnicas del yoga de la India.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 22.52949968059886,
+      "context": [],
+      "generate_ms": 446.7442,
+      "generated_tokens": 20,
+      "id": "f1598",
+      "ja": "車の衝突時には３人が家の中にいましたが、怪我人はいませんでした。",
+      "lang": "es",
+      "ms": 476.3725,
+      "output": "Cuando chocaron los vehículos, tres personas estaban dentro de la casa, pero no hubo heridos.",
+      "prompt_ms": 29.4127,
+      "prompt_tokens": 602,
+      "raw": "Cuando chocaron los vehículos, tres personas estaban dentro de la casa, pero no hubo heridos.",
+      "reference": "A pesar de que había tres personas en el interior de la vivienda en el momento del impacto del automóvil, ninguna de ellas sufrió lesiones.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 53.71535191520077,
+      "context": [],
+      "generate_ms": 571.2921,
+      "generated_tokens": 25,
+      "id": "f1601",
+      "ja": "科学者たちは、オセロットは地面の匂いを嗅いで餌になる動物（獲物）が通った場所を探し、追いかけると考えています。",
+      "lang": "es",
+      "ms": 638.9342,
+      "output": "Los científicos piensan que los ocelotes buscan comida siguiendo el olor del suelo donde han pasado animales (presa).",
+      "prompt_ms": 39.3716,
+      "prompt_tokens": 621,
+      "raw": "Los científicos piensan que los ocelotes buscan comida siguiendo el olor del suelo donde han pasado animales (presa).",
+      "reference": "Los científicos creen que los ocelotes rastrean y encuentran animales para comer (presas) a través del olfato, oliendo el suelo donde han pasado.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 55.821442499986986,
+      "context": [],
+      "generate_ms": 2076.5316000000003,
+      "generated_tokens": 91,
+      "id": "f1604",
+      "ja": "NSAとしてカーターを補佐し、1978年のキャンプ・デイビッド合意、1970年代後半の米中関係の正常化、1979年のイラン人質事件につながったイラン革命、1979年のソビエトのアフガニスタン侵攻など、世界問題を外交的に処理した。",
+      "lang": "es",
+      "ms": 2108.2898,
+      "output": "Como asesor de Carter, gestionó asuntos mundiales como el Acuerdo de Camp David de 1978, la normalización de las relaciones entre EE. UU. y China en la segunda mitad de la década de 1970, la Revolución Islámica de Irán que llevó al secuestro de embajadores en 1979, y la invasión soviética de Afganistán en 1979.",
+      "prompt_ms": 31.5204,
+      "prompt_tokens": 663,
+      "raw": "Como asesor de Carter, gestionó asuntos mundiales como el Acuerdo de Camp David de 1978, la normalización de las relaciones entre EE. UU. y China en la segunda mitad de la década de 1970, la Revolución Islámica de Irán que llevó al secuestro de embajadores en 1979, y la invasión soviética de Afganistán en 1979.",
+      "reference": "Como consejero de seguridad nacional, asistió a Carter en el manejo diplomático de asuntos internacionales, como los Acuerdos de Camp David de 1978, la normalización de las relaciones entre Estados Unidos y China a fines de la década de 1970, la Revolución iraní de 1979, la que llevó a una crisis de rehenes en Irán, y la invasión soviética en Afganistán, en 1979.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 29.540503858235347,
+      "context": [],
+      "generate_ms": 448.9613,
+      "generated_tokens": 20,
+      "id": "f1607",
+      "ja": "興味をそそられる村を30分ほど散策するのは価値があります。",
+      "lang": "es",
+      "ms": 475.709,
+      "output": "Recorrer el pueblo durante unos 30 minutos para despertar el interés vale la pena.",
+      "prompt_ms": 26.5554,
+      "prompt_tokens": 604,
+      "raw": "Recorrer el pueblo durante unos 30 minutos para despertar el interés vale la pena.",
+      "reference": "Merece la pena dedicar media hora a dar un paseo por el fascinante pueblo.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 39.99856673832906,
+      "context": [],
+      "generate_ms": 547.6436,
+      "generated_tokens": 24,
+      "id": "f1610",
+      "ja": "そういったものは、実生活の問題解決に焦点を当てた別の分野になっています。",
+      "lang": "es",
+      "ms": 569.7677,
+      "output": "Ese tipo de cosas se ha convertido en otro campo centrado en la resolución de problemas de la vida real.",
+      "prompt_ms": 21.951600000000003,
+      "prompt_tokens": 603,
+      "raw": "Ese tipo de cosas se ha convertido en otro campo centrado en la resolución de problemas de la vida real.",
+      "reference": "Estas cuestiones se han vuelto disciplinas separadas, enfocadas en ofrecer soluciones a problemas de la vida real.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 48.03925751549935,
+      "context": [],
+      "generate_ms": 551.5219999999999,
+      "generated_tokens": 24,
+      "id": "f1615",
+      "ja": "何千年も前に、アリスタルコスという学者が、太陽系は太陽の周りを移動していると言いました。",
+      "lang": "es",
+      "ms": 579.5909,
+      "output": "Hace miles de años, un científico llamado Aristarco dijo que el sistema solar se mueve alrededor del sol.",
+      "prompt_ms": 24.5225,
+      "prompt_tokens": 612,
+      "raw": "Hace miles de años, un científico llamado Aristarco dijo que el sistema solar se mueve alrededor del sol.",
+      "reference": "Milenios atrás, un hombre llamado Aristarco comentó que el Sistema Solar giraba en torno al Sol.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 40.35704210605535,
+      "context": [],
+      "generate_ms": 712.8023999999999,
+      "generated_tokens": 31,
+      "id": "f1619",
+      "ja": "しかし、カタルーニャ語が第一公用語として法律で定められているため、ほとんどの標識がカタルーニャ語のみで表示されています。",
+      "lang": "es",
+      "ms": 737.9239,
+      "output": "Sin embargo, como el catalán es la primera lengua oficial establecida por ley, la mayoría de los carteles se muestran únicamente en catalán.",
+      "prompt_ms": 24.8754,
+      "prompt_tokens": 622,
+      "raw": "Sin embargo, como el catalán es la primera lengua oficial establecida por ley, la mayoría de los carteles se muestran únicamente en catalán.",
+      "reference": "No obstante, debido a que el catalán es, legalmente, la primera lengua de carácter oficial, la mayor parte de los letreros están redactados solo en ese idioma.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 56.54711439141058,
+      "context": [],
+      "generate_ms": 498.5885,
+      "generated_tokens": 22,
+      "id": "f1622",
+      "ja": "米国のジョージ・W・ブッシュ大統領は当該発表を歓迎しました。",
+      "lang": "es",
+      "ms": 527.361,
+      "output": "El presidente de Estados Unidos, George W. Bush, acogió con beneplácito dicha declaración.",
+      "prompt_ms": 28.57,
+      "prompt_tokens": 604,
+      "raw": "El presidente de Estados Unidos, George W. Bush, acogió con beneplácito dicha declaración.",
+      "reference": "George W. Bush, presidente de los Estados Unidos, recibió con gusto el anuncio.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 36.50663188390965,
+      "context": [],
+      "generate_ms": 743.5144,
+      "generated_tokens": 32,
+      "id": "f1625",
+      "ja": "全国から集まった有名な歌手たちがシュリーシャムの足元にバジャン（聖歌）を捧げました。",
+      "lang": "es",
+      "ms": 774.2035000000001,
+      "output": "¡Los famosos cantantes de todo el país se reunieron para ofrecer un báján (santo) a los pies de Shri Shyam!",
+      "prompt_ms": 30.4476,
+      "prompt_tokens": 611,
+      "raw": "¡Los famosos cantantes de todo el país se reunieron para ofrecer un báján (santo) a los pies de Shri Shyam!",
+      "reference": "Reconocidos cantantes nacionales interpretaron bhajans, o canciones de devoción, a los pies del Shri Shyam.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 43.51045082080311,
+      "context": [],
+      "generate_ms": 888.4788,
+      "generated_tokens": 38,
+      "id": "f1629",
+      "ja": "一部の報告では公式の死者数は8人とされ、公式の報告では最大30人が負傷したことが確認されていますが、最終的な人数はまだわかっていません。",
+      "lang": "es",
+      "ms": 909.9319,
+      "output": "Según algunos informes, el número oficial de fallecidos es de 8 y se confirmó que hasta 30 personas resultaron heridas, pero aún no se conoce el número final.",
+      "prompt_ms": 21.2685,
+      "prompt_tokens": 622,
+      "raw": "Según algunos informes, el número oficial de fallecidos es de 8 y se confirmó que hasta 30 personas resultaron heridas, pero aún no se conoce el número final.",
+      "reference": "Si bien existen informes que señalan que el número oficial de muertos es ocho y las autoridades han confirmado que cerca de 30 personas resultaron herida, aún se desconocen las cifras oficiales.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 53.31337707461435,
+      "context": [],
+      "generate_ms": 815.5890999999999,
+      "generated_tokens": 34,
+      "id": "f1632",
+      "ja": "女性は文化の違いはハラスメントと呼ばれる行為にながりうることを女性は認識しておくべきであり、尾行されたり、腕を掴まれたりするのは珍しくありません。",
+      "lang": "es",
+      "ms": 839.5006000000001,
+      "output": "Las mujeres deben estar conscientes de que las diferencias culturales pueden derivar en acoso, y que ser seguido o tener el brazo agarrado no es algo raro.",
+      "prompt_ms": 23.6966,
+      "prompt_tokens": 621,
+      "raw": "Las mujeres deben estar conscientes de que las diferencias culturales pueden derivar en acoso, y que ser seguido o tener el brazo agarrado no es algo raro.",
+      "reference": "Las mujeres deben darse cuenta de que las diferencias culturales pueden provocar lo que ellas consideran acoso, y que no es poco común que sean seguidas, tomadas por el brazo, etc.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 42.49371372670232,
+      "context": [],
+      "generate_ms": 3447.141,
+      "generated_tokens": 44,
+      "id": "f1635",
+      "ja": "もっと環境に優しい生活を始めてもいいし、環境運動に参加してもいいし、将来の苦しみをある程度軽減するために活動家になってもいいのです。",
+      "lang": "es",
+      "ms": 3474.6988,
+      "output": "Puedes empezar a vivir de una manera más respetuosa con el medio ambiente, puedes participar en movimientos ambientales o incluso convertirte en activista para aliviar en cierta medida los sufrimientos del futuro.",
+      "prompt_ms": 27.3123,
+      "prompt_tokens": 617,
+      "raw": "Puedes empezar a vivir de una manera más respetuosa con el medio ambiente, puedes participar en movimientos ambientales o incluso convertirte en activista para aliviar en cierta medida los sufrimientos del futuro.",
+      "reference": "Podemos comenzar a llevar una vida más amigable con el planeta, formar parte de movimientos ambientalistas o, incluso, podemos volvernos activistas y luchar para aminorar, en alguna medida, el sufrimiento futuro.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 58.78206619197489,
+      "context": [],
+      "generate_ms": 444.0222,
+      "generated_tokens": 19,
+      "id": "f1638",
+      "ja": "サファリはおそらくアフリカで最高の観光名所であり、多くの観光客にとって観光の目玉です。",
+      "lang": "es",
+      "ms": 470.5971,
+      "output": "El Safari es probablemente el mejor lugar turístico de África y el principal atractivo para muchos visitantes.",
+      "prompt_ms": 26.404,
+      "prompt_tokens": 610,
+      "raw": "El Safari es probablemente el mejor lugar turístico de África y el principal atractivo para muchos visitantes.",
+      "reference": "Es probable que los safaris sean el mayor atractivo turístico de África y la parte más memorable para muchos visitantes.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    },
+    {
+      "cached_tokens": 572,
+      "chrf": 29.81424633396137,
+      "context": [],
+      "generate_ms": 914.7145,
+      "generated_tokens": 40,
+      "id": "f1641",
+      "ja": "この森林はただマングローブが生えているだけの沼地ではありません。森林には、かつてヒンドゥスターン平野を覆っていた広大なジャングルが残っている最後の場所も含まれています。",
+      "lang": "es",
+      "ms": 941.682,
+      "output": "Este bosque no es solo una marisma con mangle; también incluye el último lugar donde queda la vasta selva que cubrió la llanura de Hindustán en tiempos pasados.",
+      "prompt_ms": 26.797600000000003,
+      "prompt_tokens": 627,
+      "raw": "Este bosque no es solo una marisma con mangle; también incluye el último lugar donde queda la vasta selva que cubrió la llanura de Hindustán en tiempos pasados.",
+      "reference": "Sin perjuicio de ello, los bosques no son solo manglares, sino que poseen algunos de los últimos árboles que quedan de las junglas imponentes que alguna vez cubrieron la llanura de Gangetic.",
+      "sanitize_issue": null,
+      "tags": [
+        "fleurs"
+      ]
+    }
+  ]
+}

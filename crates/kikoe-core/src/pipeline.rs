@@ -30,7 +30,10 @@ use crate::metrics::{LatencyBook, LatencyReport, SegmentTiming};
 use crate::queue::{DropOldestQueue, Pop};
 use crate::resample::Resampler;
 use crate::segmenter::{Segmenter, SegmenterConfig, SegmenterStats, SpeechSegment, Vad};
-use crate::translate::{ContextWindow, PromptStyle, RenderedPrompt, render_prompt, sanitize_output, stop_strings};
+use crate::translate::{
+    ContextWindow, PromptStyle, RenderedPrompt, Route, check_plausible, render_assisted_prompt, render_prompt, sanitize_output,
+    stop_strings,
+};
 
 // ---------------------------------------------------------------------------
 // Engine traits (implemented by kikoe-asr and the translation worker client)
@@ -112,6 +115,8 @@ pub struct PipelineConfig {
     /// Live mode drops stale work. The offline evaluator can disable it to
     /// measure engine quality on every segment.
     pub drop_stale: bool,
+    /// How Spanish subtitles are produced (English always goes direct).
+    pub spanish_route: Route,
 }
 
 impl Default for PipelineConfig {
@@ -126,6 +131,7 @@ impl Default for PipelineConfig {
             context_gap_ms: 15_000,
             stats_interval_ms: 1_000,
             drop_stale: true,
+            spanish_route: crate::models::DEFAULT_SPANISH_ROUTE,
         }
     }
 }
@@ -720,17 +726,16 @@ fn translate_job(
             return;
         }
         let style = t.prompt_style(lang);
-        let prompt = render_prompt(style, lang, &context, &ja);
         timing.mt_start_ns = s.clock.now_ns();
         let cancel = CancelFlags { stop: &s.stop, switch };
-        let res = t.translate(&prompt, &stop_strings(style), &cancel);
+        let res = translate_line(t, style, lang, s.cfg.spanish_route, &context, &ja, &cancel);
         timing.mt_end_ns = s.clock.now_ns();
         if s.stopping() {
             return;
         }
         match res {
             Ok(out) => {
-                let text = match sanitize_output(&out.raw) {
+                let text = match sanitize_output(&out.raw).and_then(|t| check_plausible(&ja, &t).map(|_| t)) {
                     Ok(t) => t,
                     Err(issue) => {
                         fail(s, seg_id, lang, format!("unusable model output ({issue:?})"));
@@ -801,6 +806,57 @@ fn translate_job(
             }
         }
     }
+}
+
+/// Translate one line by the configured route. An implausible direct Spanish
+/// output (example echo / truncation) is retried once through the
+/// English-assisted route; anything still implausible is rejected by the caller.
+pub fn translate_line(
+    t: &mut dyn TranslationEngine,
+    style: PromptStyle,
+    lang: TargetLanguage,
+    spanish_route: Route,
+    context: &[String],
+    ja: &str,
+    cancel: &CancelFlags<'_>,
+) -> Result<TranslationOutput, TranslateError> {
+    if lang == TargetLanguage::Es && spanish_route == Route::EnglishAssisted {
+        return translate_assisted(t, style, context, ja, cancel);
+    }
+    let out = t.translate(&render_prompt(style, lang, context, ja), &stop_strings(style), cancel)?;
+    let plausible = sanitize_output(&out.raw).is_ok_and(|x| check_plausible(ja, &x).is_ok());
+    if !plausible && lang == TargetLanguage::Es {
+        let mut retry = translate_assisted(t, style, context, ja, cancel)?;
+        retry.prompt_ms += out.prompt_ms;
+        retry.generate_ms += out.generate_ms;
+        return Ok(retry);
+    }
+    Ok(out)
+}
+
+/// Spanish via an English draft: the model gets the Japanese line (source of
+/// truth) plus its own English translation as a hint. Falls back to direct
+/// Spanish when the draft is unusable.
+pub fn translate_assisted(
+    t: &mut dyn TranslationEngine,
+    style: PromptStyle,
+    context: &[String],
+    ja: &str,
+    cancel: &CancelFlags<'_>,
+) -> Result<TranslationOutput, TranslateError> {
+    let stop = stop_strings(style);
+    let draft = t.translate(&render_prompt(style, TargetLanguage::En, context, ja), &stop, cancel)?;
+    let prompt = match sanitize_output(&draft.raw) {
+        Ok(d) => render_assisted_prompt(style, TargetLanguage::Es, context, ja, &d),
+        Err(_) => render_prompt(style, TargetLanguage::Es, context, ja),
+    };
+    let mut out = t.translate(&prompt, &stop, cancel)?;
+    out.prompt_tokens += draft.prompt_tokens;
+    out.cached_tokens += draft.cached_tokens;
+    out.generated_tokens += draft.generated_tokens;
+    out.prompt_ms += draft.prompt_ms;
+    out.generate_ms += draft.generate_ms;
+    Ok(out)
 }
 
 fn fail(s: &Shared, seg_id: u64, lang: TargetLanguage, reason: String) {

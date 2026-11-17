@@ -25,19 +25,41 @@ const GLOSSARY: &str = "兎田ぺこら = Usada Pekora; ぺこら = Pekora; ぺ�
 宝鐘マリン = Houshou Marine; マリン船長 / 船長 = Captain Marine; ホロライブ = hololive; \
 スパチャ = superchat; 配信 = stream; コラボ = collab; 先輩 = senpai; 野うさぎ = nousagi (Pekora's fans)";
 
-fn system_prompt(lang: TargetLanguage) -> String {
+/// How a target language is produced.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum Route {
+    /// Japanese -> target in one step.
+    Direct,
+    /// Japanese -> English draft, then Japanese (+ English draft as a hint) -> target.
+    /// The Japanese line stays the source of truth; see EVIDENCE.md for why this
+    /// is used for Spanish.
+    EnglishAssisted,
+}
+
+fn system_prompt(lang: TargetLanguage, assisted: bool) -> String {
     let (target, style) = match lang {
         TargetLanguage::En => ("English", "Natural, casual English, short enough to read as a subtitle."),
         TargetLanguage::Es => (
             "Spanish",
-            "Natural, casual, neutral Latin American Spanish (use tú/ustedes, never vosotros), short enough to read as a subtitle.",
+            "Natural, casual, neutral Latin American Spanish (use tú/ustedes, never vosotros), short enough to read as a subtitle. \
+Use correct Spanish forms, especially negative commands (¡No te preocupes!, ¡No me dejen solo!).",
         ),
+    };
+    let draft = if assisted {
+        "\nThe user message also contains \"English draft:\", a machine translation of the same line that may contain mistakes. \
+The Japanese line is the source of truth: use the draft only to help you understand it, and follow the Japanese wherever they disagree."
+    } else {
+        ""
     };
     format!(
         "You translate live Japanese speech from streams (VTubers, gaming) into {target} subtitles.\n\
-Translate ONLY the text after \"Line:\". Lines under \"Context:\" were said just before; use them only to understand the line and never translate or repeat them.\n\
+Translate ONLY the text after \"Line:\". Lines under \"Context:\" were said just before; use them only to understand the line and never translate or repeat them.{draft}\n\
 Rules:\n\
-- Keep the exact meaning: who does what, negation (ない, ません, じゃない, ず), questions, and tense.\n\
+- Keep the exact meaning: who does what, negation (ない, ません, じゃない, ず, わけじゃない), questions, and tense.\n\
+- Japanese often leaves the subject out. In a stream it is usually the speaker (\"I\"); use \"you\" or \"he/she\" only when the line says so or clearly addresses someone.\n\
+- Keep every person, place, object, number and name that the line mentions; never replace one with something else.\n\
+- Translate set phrases and interjections by their meaning, not word by word (e.g. マジで？ = \"Seriously?\", なるほど = \"I see\").\n\
 - Do not add information, explanations, notes, or reactions that are not in the line.\n\
 - If the line is an unfinished fragment, translate it as a fragment.\n\
 - {style}\n\
@@ -47,23 +69,19 @@ Output only the {target} subtitle on a single line."
     )
 }
 
-fn examples(lang: TargetLanguage) -> [(&'static str, &'static str); 4] {
-    // Deliberately different from every line in eval/corpus so the evaluation is not contaminated.
-    match lang {
-        TargetLanguage::En => [
-            ("Line: 今日はマイクラやるぺこ！", "We're playing Minecraft today, peko!"),
-            ("Context:\nこのボス、強くない？\nLine: いや、そんなの聞いてないって。", "No way, nobody told me about that."),
-            ("Line: え、誰も来てないの？", "Wait, nobody's here?"),
-            ("Line: うわっ！", "Whoa!"),
-        ],
-        TargetLanguage::Es => [
-            ("Line: 今日はマイクラやるぺこ！", "¡Hoy jugamos Minecraft, peko!"),
-            ("Context:\nこのボス、強くない？\nLine: いや、そんなの聞いてないって。", "No, nadie me dijo nada de eso."),
-            ("Line: え、誰も来てないの？", "¿Eh, no vino nadie?"),
-            ("Line: うわっ！", "¡Uy!"),
-        ],
-    }
-}
+/// (Japanese user turn, English answer, Spanish answer). Deliberately different
+/// from every line in eval/corpus so the evaluation is not contaminated.
+const EXAMPLES: [(&str, &str, &str); 5] = [
+    ("Line: 今日はマイクラやるぺこ！", "We're playing Minecraft today, peko!", "¡Hoy jugamos Minecraft, peko!"),
+    (
+        "Context:\nこのボス、強くない？\nLine: いや、そんなの聞いてないって。",
+        "No way, nobody told me about that.",
+        "No, nadie me dijo nada de eso.",
+    ),
+    ("Line: え、誰も来てないの？", "Wait, nobody's here?", "¿Eh, no vino nadie?"),
+    ("Line: 昨日ちょっと寝坊しちゃった。", "I overslept a little yesterday.", "Ayer me dormí un poco."),
+    ("Line: うわっ！", "Whoa!", "¡Uy!"),
+];
 
 pub fn user_message(context: &[String], line: &str) -> String {
     let mut s = String::new();
@@ -94,19 +112,38 @@ impl RenderedPrompt {
     }
 }
 
+fn chatml(system: String, turns: Vec<(String, String)>, user: String, line: &str) -> RenderedPrompt {
+    let mut prefix = format!("<|im_start|>system\n{system}<|im_end|>\n");
+    for (u, a) in turns {
+        prefix.push_str(&format!("<|im_start|>user\n{u}<|im_end|>\n<|im_start|>assistant\n{a}<|im_end|>\n"));
+    }
+    let suffix = format!("<|im_start|>user\n{user}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n");
+    let chars = line.chars().count() as u32;
+    RenderedPrompt { prefix, suffix, max_tokens: (chars * 3).clamp(24, 160) }
+}
+
+/// Direct Japanese -> `lang` prompt.
 pub fn render_prompt(style: PromptStyle, lang: TargetLanguage, context: &[String], line: &str) -> RenderedPrompt {
     match style {
         PromptStyle::ChatMlNoThink => {
-            let mut prefix = format!("<|im_start|>system\n{}<|im_end|>\n", system_prompt(lang));
-            for (u, a) in examples(lang) {
-                prefix.push_str(&format!("<|im_start|>user\n{u}<|im_end|>\n<|im_start|>assistant\n{a}<|im_end|>\n"));
-            }
-            let suffix = format!(
-                "<|im_start|>user\n{}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
-                user_message(context, line)
-            );
-            let chars = line.chars().count() as u32;
-            RenderedPrompt { prefix, suffix, max_tokens: (chars * 3).clamp(24, 160) }
+            let turns = EXAMPLES
+                .iter()
+                .map(|(u, en, es)| (u.to_string(), if lang == TargetLanguage::En { en } else { es }.to_string()))
+                .collect();
+            chatml(system_prompt(lang, false), turns, user_message(context, line), line)
+        }
+    }
+}
+
+/// Japanese (+ English draft) -> `lang` prompt for [`Route::EnglishAssisted`].
+pub fn render_assisted_prompt(style: PromptStyle, lang: TargetLanguage, context: &[String], line: &str, draft: &str) -> RenderedPrompt {
+    match style {
+        PromptStyle::ChatMlNoThink => {
+            let turns = EXAMPLES
+                .iter()
+                .map(|(u, en, es)| (format!("{u}\nEnglish draft: {en}"), if lang == TargetLanguage::En { en } else { es }.to_string()))
+                .collect();
+            chatml(system_prompt(lang, true), turns, format!("{}\nEnglish draft: {draft}", user_message(context, line)), line)
         }
     }
 }
@@ -125,6 +162,10 @@ pub enum SanitizeIssue {
     ReasoningLeak,
     UntranslatedJapanese,
     Commentary,
+    /// The model answered with one of the few-shot example outputs instead of translating.
+    ExampleEcho,
+    /// Far too short for the source line (e.g. a long sentence rendered as "Whoa!").
+    TooShort,
 }
 
 fn is_cjk(c: char) -> bool {
@@ -194,6 +235,27 @@ pub fn sanitize_output(raw: &str) -> Result<String, SanitizeIssue> {
     Ok(line)
 }
 
+/// Reject outputs that cannot be a translation of `ja` even though they are
+/// well-formed: an echo of a few-shot answer, or a drastically truncated line.
+/// (Observed: a 84-character FLEURS sentence translated as "¡Uy!".)
+pub fn check_plausible(ja: &str, out: &str) -> Result<(), SanitizeIssue> {
+    let src_chars = ja.chars().filter(|c| !c.is_whitespace()).count();
+    let norm = |s: &str| s.trim().trim_end_matches(['.', '!', '?', '¡', '¿']).to_lowercase();
+    // Short interjections legitimately share answers with examples ("Whoa!").
+    let echoed = src_chars >= 8 && EXAMPLES.iter().any(|(u, en, es)| {
+        let example_line = u.rsplit("Line: ").next().unwrap_or("");
+        example_line != ja && (norm(out) == norm(en) || norm(out) == norm(es))
+    });
+    if echoed {
+        return Err(SanitizeIssue::ExampleEcho);
+    }
+    let out_letters = out.chars().filter(|c| c.is_alphanumeric()).count();
+    if src_chars >= 16 && out_letters * 2 < src_chars {
+        return Err(SanitizeIssue::TooShort);
+    }
+    Ok(())
+}
+
 /// Recent Japanese lines used as context for the next translation.
 /// Lines are pushed as soon as ASR produces them (possibly ahead of translation),
 /// so selection only takes lines that ended before the current one started.
@@ -253,6 +315,16 @@ mod tests {
     }
 
     #[test]
+    fn assisted_prompt_keeps_japanese_as_source_and_draft_in_suffix() {
+        let p = render_assisted_prompt(PromptStyle::ChatMlNoThink, TargetLanguage::Es, &[], "行かないで", "Don't go");
+        assert!(p.prefix.contains("source of truth"));
+        assert!(p.suffix.contains("Line: 行かないで
+English draft: Don't go"));
+        let q = render_assisted_prompt(PromptStyle::ChatMlNoThink, TargetLanguage::Es, &[], "待って", "Wait");
+        assert_eq!(p.prefix, q.prefix, "assisted prefix must be cacheable");
+    }
+
+    #[test]
     fn sanitize_strips_reasoning_labels_quotes_and_notes() {
         assert_eq!(sanitize_output("<think>\nhmm\n</think>\n\nI won't go.").unwrap(), "I won't go.");
         assert_eq!(sanitize_output("Translation: \"Don't laugh!\"").unwrap(), "Don't laugh!");
@@ -264,6 +336,17 @@ mod tests {
         assert_eq!(sanitize_output("全然怖くないし"), Err(SanitizeIssue::UntranslatedJapanese));
         // a single kanji name inside an English line is acceptable
         assert_eq!(sanitize_output("That's Pekora's (ぺこら) fault").unwrap(), "That's Pekora's (ぺこら) fault");
+    }
+
+    #[test]
+    fn implausible_outputs_are_rejected() {
+        let long = "彼女がこの結論に至ったのは、避妊薬が医学的に必要であると考えるよう促す多くの肯定的な意見や励ましが寄せられたためです。";
+        assert_eq!(check_plausible(long, "¡Uy!"), Err(SanitizeIssue::ExampleEcho));
+        assert_eq!(check_plausible(long, "She agreed."), Err(SanitizeIssue::TooShort));
+        assert!(check_plausible("うわっ！", "Whoa!").is_ok(), "the example's own line may produce the example answer");
+        assert!(check_plausible("やった！", "Yay!").is_ok(), "short lines may have short translations");
+        assert!(check_plausible("うわあ！", "Whoa!").is_ok(), "an interjection may match an example answer");
+        assert!(check_plausible("まだ行かないで、ちょっと待って。", "Don't go yet, wait a second.").is_ok());
     }
 
     #[test]

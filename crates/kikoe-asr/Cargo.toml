@@ -1,0 +1,16 @@
+[package]
+name = "kikoe-asr"
+description = "Japanese ASR (whisper.cpp) and Silero VAD (whisper.cpp ggml) adapters for KikoeLive."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[features]
+default = []
+cuda = ["whisper-rs/cuda"]
+metal = ["whisper-rs/metal"]
+
+[dependencies]
+kikoe-core.workspace = true
+whisper-rs = { version = "0.16", features = ["log_backend"] }

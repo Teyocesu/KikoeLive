@@ -50,11 +50,21 @@ pub struct WorkerTranslator {
     next_id: u64,
     stderr_tail: Arc<Mutex<VecDeque<String>>>,
     spawns: u32,
+    /// What the worker reported for the loaded model (name, GPU layers actually used).
+    loaded_info: Option<(String, u32)>,
 }
 
 impl WorkerTranslator {
     pub fn new(cfg: WorkerConfig) -> Self {
-        Self { cfg, proc: None, loaded: None, next_id: 1, stderr_tail: Arc::new(Mutex::new(VecDeque::new())), spawns: 0 }
+        Self {
+            cfg,
+            proc: None,
+            loaded: None,
+            next_id: 1,
+            stderr_tail: Arc::new(Mutex::new(VecDeque::new())),
+            spawns: 0,
+            loaded_info: None,
+        }
     }
 
     pub fn backend(&self) -> Option<&str> {
@@ -63,6 +73,11 @@ impl WorkerTranslator {
 
     pub fn spawn_count(&self) -> u32 {
         self.spawns
+    }
+
+    /// (model description, GPU layers actually used) of the loaded model.
+    pub fn loaded_info(&self) -> Option<&(String, u32)> {
+        self.loaded_info.as_ref()
     }
 
     pub fn pid(&self) -> Option<u32> {
@@ -178,8 +193,9 @@ impl TranslationEngine for WorkerTranslator {
         loop {
             let rx = self.proc.as_ref().ok_or("worker not running")?.rx.clone();
             match rx.recv_timeout(deadline.saturating_duration_since(Instant::now())) {
-                Ok(Ok(WorkerResponse::Loaded { .. })) => {
+                Ok(Ok(WorkerResponse::Loaded { description, gpu_layers, .. })) => {
                     self.loaded = Some(model.path.clone());
+                    self.loaded_info = Some((description, gpu_layers));
                     return Ok(Some(t0.elapsed().as_millis() as u64));
                 }
                 Ok(Ok(WorkerResponse::Error { message, .. })) => {
@@ -289,7 +305,11 @@ impl TranslationEngine for WorkerTranslator {
             .iter()
             .filter_map(|l| self.cfg.models.get(l).map(|m| format!("{}: {}", l.code(), m.label)))
             .collect();
-        labels.join(", ")
+        let mut d = labels.join(", ");
+        if let Some((desc, layers)) = &self.loaded_info {
+            d.push_str(&format!(" [{}{}]", if *layers > 0 { "GPU" } else { "CPU" }, if desc.contains("fallback") { ", fallback" } else { "" }));
+        }
+        d
     }
 }
 
