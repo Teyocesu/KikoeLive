@@ -1,0 +1,21 @@
+# Build outputs
+/target/
+**/target/
+/app/dist/
+/app/node_modules/
+/app/src-tauri/gen/
+/app/src-tauri/binaries/
+
+# Evaluation data and model weights never go into Git
+/eval/data/
+*.gguf
+*.bin
+*.wav
+*.part
+*.tar.gz
+
+# Local tooling
+/.tools/
+*.log
+.DS_Store
+Thumbs.db

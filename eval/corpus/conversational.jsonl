@@ -1,0 +1,48 @@
+{"id":"c01","ja":"ぺこらは今日ホラーゲームやらないよ。","en":"Pekora isn't playing a horror game today.","es":"Pekora no va a jugar un juego de terror hoy.","tags":["negation","self-name","name"]}
+{"id":"c02","ja":"え、待って、それ本当？","en":"Wait, what? Is that true?","es":"¿Eh? Espera, ¿eso es verdad?","tags":["question","interjection"]}
+{"id":"c03","ja":"やばいやばいやばい、死ぬ死ぬ！","en":"Oh no, oh no, oh no, I'm gonna die, I'm gonna die!","es":"¡No, no, no, me muero, me muero!","tags":["reaction","game"]}
+{"id":"c04","ja":"全然怖くないし。","en":"It's not scary at all.","es":"No da nada de miedo.","tags":["negation"]}
+{"id":"c05","ja":"怖くないわけじゃないけど、大丈夫。","en":"It's not that I'm not scared, but I'm okay.","es":"No es que no tenga miedo, pero estoy bien.","tags":["double-negation"]}
+{"id":"c06","ja":"まだ行かないで、ちょっと待って。","en":"Don't go yet, wait a second.","es":"No te vayas todavía, espera un momento.","tags":["negation","imperative"]}
+{"id":"c07","ja":"みんな、コメントありがとう！","en":"Thanks for the comments, everyone!","es":"¡Gracias por los comentarios a todos!","tags":["chat"]}
+{"id":"c08","ja":"今日は新しいゲームをやっていくぺこ。","en":"Today we're going to play a new game, peko.","es":"Hoy vamos a jugar un juego nuevo, peko.","tags":["name","tic"]}
+{"id":"c09","ja":"それはマリン船長のせいだよ。","en":"That's Captain Marine's fault.","es":"Eso es culpa de la capitana Marine.","tags":["name","subject"]}
+{"id":"c10","ja":"誰がそんなこと言ったの？","en":"Who said that?","es":"¿Quién dijo eso?","tags":["question"]}
+{"id":"c11","ja":"もう二度とやらない。","en":"I'm never doing this again.","es":"No lo vuelvo a hacer nunca más.","tags":["negation"]}
+{"id":"c12","ja":"あれ、ドアが開かない。","en":"Huh, the door won't open.","es":"¿Eh? La puerta no se abre.","tags":["negation","game"]}
+{"id":"c13","ja":"鍵を取ってから戻ろう。","en":"Let's get the key and then go back.","es":"Tomemos la llave y después volvamos.","tags":["action","game"]}
+{"id":"c14","ja":"左だって言ったじゃん！","en":"I told you it was left!","es":"¡Te dije que era a la izquierda!","tags":["subject"]}
+{"id":"c15","ja":"ちょっと音大きすぎない？","en":"Isn't the sound a bit too loud?","es":"¿No está el sonido un poco demasiado alto?","tags":["negative-question"]}
+{"id":"c16","ja":"配信始めるの遅れてごめんね。","en":"Sorry for starting the stream late.","es":"Perdón por empezar tarde la transmisión.","tags":["stream"]}
+{"id":"c17","ja":"お腹すいたから、ちょっと休憩する。","en":"I'm hungry, so I'll take a short break.","es":"Tengo hambre, así que voy a tomar un descansito.","tags":["cause"]}
+{"id":"c18","ja":"これ、絶対罠でしょ。","en":"This is definitely a trap, right?","es":"Esto seguro que es una trampa, ¿no?","tags":["game"]}
+{"id":"c19","ja":"勝った！やったー！","en":"I won! Yay!","es":"¡Gané! ¡Bien!","tags":["reaction"]}
+{"id":"c20","ja":"負けたくないんだけど。","en":"I really don't want to lose.","es":"Es que no quiero perder.","tags":["negation"]}
+{"id":"c21","ja":"知らなかった、そんなの。","en":"I didn't know that.","es":"No sabía eso.","tags":["negation","inverted-order"]}
+{"id":"c22","ja":"それはぺこらのじゃないよ。","en":"That's not Pekora's.","es":"Eso no es de Pekora.","tags":["negation","name"]}
+{"id":"c23","ja":"明日も配信するから、見に来てね。","en":"I'm streaming tomorrow too, so come watch.","es":"Mañana también voy a transmitir, así que vengan a ver.","tags":["stream"]}
+{"id":"c24","ja":"え、なんで？意味わかんない。","en":"Huh, why? That makes no sense.","es":"¿Eh, por qué? No tiene sentido.","tags":["question","negation"]}
+{"id":"c25","ja":"ここで死んだら最初からやり直しだ。","en":"If I die here, I have to start over from the beginning.","es":"Si muero aquí, tengo que empezar de nuevo desde el principio.","tags":["conditional","game"]}
+{"id":"c26","ja":"先輩に怒られちゃった。","en":"I got scolded by my senpai.","es":"Mi senpai me regañó.","tags":["passive","subject"]}
+{"id":"c27","ja":"別に好きじゃないし。","en":"It's not like I like it or anything.","es":"Tampoco es que me guste.","tags":["negation"]}
+{"id":"c28","ja":"お疲れぺこ！また明日！","en":"Good work today, peko! See you tomorrow!","es":"¡Buen trabajo, peko! ¡Hasta mañana!","tags":["tic","greeting"]}
+{"id":"c29","ja":"ボス強すぎるんだけど。","en":"This boss is way too strong.","es":"Este jefe es demasiado fuerte.","tags":["game"]}
+{"id":"c30","ja":"まだ一回も勝ってない。","en":"I haven't won even once yet.","es":"Todavía no he ganado ni una vez.","tags":["negation"]}
+{"id":"c31","ja":"スパチャありがとう、助かる！","en":"Thanks for the superchat, that really helps!","es":"¡Gracias por el superchat, me ayuda mucho!","tags":["chat"]}
+{"id":"c32","ja":"あ、そこ宝箱あるじゃん。","en":"Oh, there's a treasure chest right there.","es":"Ah, ahí hay un cofre del tesoro.","tags":["game"]}
+{"id":"c33","ja":"行けると思ったのに。","en":"I thought I could make it...","es":"Pensé que lo iba a lograr...","tags":["fragment"]}
+{"id":"c34","ja":"嘘でしょ、また落ちた。","en":"No way, I fell again.","es":"No puede ser, me caí otra vez.","tags":["game"]}
+{"id":"c35","ja":"声が聞こえないって？マイク大丈夫？","en":"You can't hear my voice? Is the mic okay?","es":"¿Que no se escucha mi voz? ¿Está bien el micrófono?","tags":["negation","question"]}
+{"id":"c36","ja":"笑わないでよ！","en":"Don't laugh!","es":"¡No se rían!","tags":["negation","imperative"],"notes":"singular ¡No te rías! is equally correct"}
+{"id":"c37","ja":"ホロライブの3期生です。","en":"I'm part of hololive's third generation.","es":"Soy de la tercera generación de hololive.","tags":["name"]}
+{"id":"c38","ja":"次は失敗しないから見てて。","en":"I won't mess up next time, so watch.","es":"La próxima no voy a fallar, así que miren.","tags":["negation","future"]}
+{"id":"c39","ja":"この敵、倒さなくてもいいよ。","en":"You don't have to defeat this enemy.","es":"No hace falta derrotar a este enemigo.","tags":["negation","permission"]}
+{"id":"c40","ja":"えっと、何の話だっけ？","en":"Um, what were we talking about?","es":"Eh... ¿de qué estábamos hablando?","tags":["question"]}
+{"id":"p1a","ja":"昨日マリン船長とコラボしたんだけど、","en":"Yesterday I did a collab with Captain Marine, and...","es":"Ayer hice una colaboración con la capitana Marine, y...","tags":["fragment","name"]}
+{"id":"p1b","ja":"めっちゃ楽しかった。","context":["昨日マリン船長とコラボしたんだけど、"],"en":"It was super fun.","es":"Fue súper divertido.","tags":["context"]}
+{"id":"p2a","ja":"このゲーム、前にもやったことあるんだよね。","en":"I've actually played this game before.","es":"Ya jugué este juego antes, ¿sabes?","tags":["experience"]}
+{"id":"p2b","ja":"でも全然覚えてない。","context":["このゲーム、前にもやったことあるんだよね。"],"en":"But I don't remember it at all.","es":"Pero no me acuerdo para nada.","tags":["negation","context"]}
+{"id":"p3a","ja":"犯人はたぶんあの人だと思う。","en":"I think the culprit is probably that person.","es":"Creo que el culpable probablemente es esa persona.","tags":["opinion"]}
+{"id":"p3b","ja":"いや、違うかも。","context":["犯人はたぶんあの人だと思う。"],"en":"No, maybe not.","es":"No, tal vez no.","tags":["negation","context"]}
+{"id":"p4a","ja":"宿題やった？","en":"Did you do your homework?","es":"¿Hiciste la tarea?","tags":["question"]}
+{"id":"p4b","ja":"まだやってない。","context":["宿題やった？"],"en":"I haven't done it yet.","es":"Todavía no la hice.","tags":["negation","context"]}
