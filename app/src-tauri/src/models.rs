@@ -27,6 +27,23 @@ pub fn app_path(spec: &ModelSpec) -> PathBuf {
     models_dir().join(spec.file_name)
 }
 
+/// `models\` next to the executable: lets a portable folder carry its own models.
+pub fn portable_path(spec: &ModelSpec) -> Option<PathBuf> {
+    std::env::current_exe().ok()?.parent().map(|d| d.join("models").join(spec.file_name))
+}
+
+/// Where a model may live, in priority order: user-chosen file, app data, portable folder.
+fn candidates(spec: &ModelSpec, settings: &Settings) -> Vec<PathBuf> {
+    settings
+        .model_paths
+        .get(spec.id)
+        .map(PathBuf::from)
+        .into_iter()
+        .chain(std::iter::once(app_path(spec)))
+        .chain(portable_path(spec))
+        .collect()
+}
+
 #[derive(Clone, Debug, Serialize)]
 pub struct ModelState {
     pub id: &'static str,
@@ -46,14 +63,7 @@ pub struct ModelState {
 
 /// Path of a verified, usable copy of `spec`, if any.
 pub fn resolve(spec: &ModelSpec, settings: &Settings) -> Option<PathBuf> {
-    let candidates: Vec<PathBuf> = settings
-        .model_paths
-        .get(spec.id)
-        .map(PathBuf::from)
-        .into_iter()
-        .chain(std::iter::once(app_path(spec)))
-        .collect();
-    for c in candidates {
+    for c in candidates(spec, settings) {
         let ok = settings.verified.iter().any(|r| Path::new(&r.path) == c && r.still_valid(spec));
         if ok {
             return Some(c);
@@ -70,7 +80,8 @@ pub fn inventory(settings: &Settings) -> Vec<ModelState> {
             let (status, path, detail) = match resolve(spec, settings) {
                 Some(p) => ("installed", Some(p.to_string_lossy().into_owned()), None),
                 None => {
-                    let p = settings.model_paths.get(spec.id).map(PathBuf::from).unwrap_or_else(|| app_path(spec));
+                    // first candidate that exists on disk, else the default location
+                    let p = candidates(spec, settings).into_iter().find(|c| c.exists()).unwrap_or_else(|| app_path(spec));
                     match quick_check(&p, spec) {
                         Ok(()) => ("needs_verification", Some(p.to_string_lossy().into_owned()), None),
                         Err(kikoe_core::models::VerifyError::Missing) => ("missing", None, None),
