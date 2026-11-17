@@ -42,6 +42,6 @@ are re-implemented from the brief (see HANDOFF.md).
 * Two native inference libraries are compiled (whisper.cpp, llama.cpp); both are
   ggml-based, so GPU support and quantisation formats stay consistent.
 * Windows CUDA builds need the CUDA runtime DLLs next to the executables
-  (redistributable under the CUDA EULA, ~0.5 GB); a CPU-only build avoids that.
+  (redistributable under the CUDA EULA, ≈0.77 GB for cudart + cuBLAS + cuBLASLt 12.9); a CPU-only build avoids that.
 * The worker is a Tauri `externalBin` sidecar; the app spawns it only from its own
   install directory.

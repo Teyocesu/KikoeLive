@@ -178,3 +178,104 @@ a switch EN→ES at 60 s. Playback start was aligned automatically (offset 2.26 
   accumulating delay; speech end → subtitle median 2.7 s EN / 3.1 s ES, p95 10.0 /
   6.5 s, max 11.7 s. 0 stale-language publications after the switch.
 * Stop with the worker loaded: 771 ms (includes worker shutdown).
+
+## 5. The desktop application, real use on Windows — [run] + [visual]
+Portable build `dist\windows\KikoeLive\` (unsigned): `KikoeLive.exe` 60.9 MB,
+`kikoe-mt.exe` 56.4 MB, CUDA runtime DLLs 0.77 GB. Driven through its real UI
+(DOM events via a test-only WebView2 DevTools port, no synthetic mouse input on
+the desktop); screenshots of KikoeLive's own windows only (`PrintWindow`).
+The computer-use tool could not be used: it does not list unregistered portable
+apps.
+
+| check | result |
+|---|---|
+| first launch: model files present elsewhere registered, SHA-256 verified in background | 4/4 verified and recorded, no copy made |
+| audio sources listed | 18 render endpoints, default marked (after fixing COM RPC_E_CHANGED_MODE on Tauri's STA thread) |
+| language packs show the backend's translator | "ready · Qwen3.5 4B" for both (after fixing the UI picking the first installed model) |
+| Start → Listening | 1.5 s; translator ready ≈ 4 s later (shown as "Loading translator…") |
+| subtitles in preview + floating overlay | yes — Japanese line above, translation below (screenshots) |
+| switch to Español while running | first Spanish line on the overlay 1.0 s after the click; same worker process (no restart, no reload); older English lines marked "switched to Español", never relabelled |
+| failure: worker process killed mid-stream | UI "Recovering" within 1 s, new worker spawned, Spanish subtitles resumed 6.7 s later, no line lost |
+| in-app diagnostics (detected speech end → subtitle) | EN 0.99 s (p95 1.11) · ES 1.04 s (p95 3.25, includes the crash) · ASR 0.25 s · 0 dropped · 1 restart · 38,464 packets, 0 dropped |
+| Stop | "Stopped in 746 ms", worker process gone |
+| overlay hide/show (main window), overlay × button, Reset position | all work; Reset restores a lost/hidden overlay (fixed: it now also re-enables the setting) |
+| close main window | whole app exits in 440 ms, no leftover processes |
+| relaunch | remembers Español and overlay settings |
+| stored files | only `settings.json` + model files; no audio, no transcripts |
+
+Not verified: drag-to-move and corner-resize by real mouse (implemented with
+Tauri `startDragging` / `startResizeDragging`; not exercised without desktop
+input) [static]; overlay translucency (PrintWindow renders opaque) [n/t].
+
+## 6. Resources (Windows, RTX 4050 shared with other apps) — [run]
+App session (~6 min incl. 2 min of speech, switch, crash/recovery), 654 samples:
+
+| process | CPU median / max | working set median / max | private max |
+|---|---|---|---|
+| KikoeLive.exe (UI, capture, VAD, Whisper) | 0.58 / 1.42 cores | 682 / 1183 MB | 1.97 GB |
+| kikoe-mt.exe (Qwen3.5-4B on CUDA) | 0.01 / 1.02 cores | 3.4 / 3.8 GB | 4.8 GB |
+
+GPU: whole-card memory peaked at 5.8 of 6.1 GB **together with the owner's other
+GPU apps**; utilisation median 19 %. The worker's private bytes (4.8 GB) include
+CUDA driver host allocations and the prompt-state cache; not investigated
+further. After Stop the app keeps ≈0.6 GB private (CUDA context). These figures
+say nothing about the 8 GiB M1 (not measured).
+
+## 7. Automated tests — [test]
+* `cargo test -p kikoe-core`: 41 unit tests (resampler incl. anti-aliasing,
+  segmenter, filters incl. negation preservation, language control, prompts,
+  sanitiser + plausibility guard, coordinator ordering/staleness/wrong-language,
+  queues, metrics bounds, protocol, model verification incl. truncated / wrong
+  format / tampered files) + 5 pipeline **simulations** with stand-in engines
+  (switch mid-translation, ordering/duplicates, overload bounded + returns to
+  live, Stop < 500 ms during inference, worker crash recovery). All pass.
+* `cargo test -p kikoe-eval`: chrF/CER metric tests pass.
+* `npm run build`: TypeScript strict type-check + Vite build pass.
+* CI workflow `.github/workflows/ci.yml` (core tests on Windows/macOS/Linux,
+  Windows CPU build, macOS Metal build): **written, never run** (nothing pushed).
+
+## 8. Security & privacy — [static] + [run]
+* No network listener in the product (worker uses stdin/stdout only). The
+  WebView2 DevTools port above was enabled only by an environment variable in
+  the test session.
+* Network: only user-initiated model downloads from pinned Hugging Face
+  revisions, `.part` + SHA-256 before use [test for verification; download path
+  not exercised this round — all models were already present].
+* No microphone code path; capture opens render endpoints in loopback only.
+* Each window is granted only its commands (Tauri app manifest + capabilities;
+  the overlay cannot start/stop, download or choose files).
+* Commands validate input (language parse, catalog ids, absolute existing file
+  paths verified by hash); no shell execution; the worker is started from the
+  app's own directory.
+* Persisted data: `settings.json` only (checked on disk).
+
+## 9. Verification matrix
+| requirement | status | evidence |
+|---|---|---|
+| App builds and launches (Windows) | **PASS** | §5 |
+| App builds and launches (macOS) | **NOT TESTED** | no Mac available; SCK adapter not compiled |
+| Usable main window | **PASS** | §5 screenshots |
+| System-audio capture (WASAPI loopback) | **PASS** | §4, §5 |
+| System-audio capture (ScreenCaptureKit) | **NOT TESTED** | written only |
+| Japanese reaches real ASR | **PASS** | §1, §3–5 |
+| Real local translation, EN subtitles | **PASS** (functional) | §3–5 |
+| Real local translation, ES subtitles | **PASS** (functional) | §3–5 |
+| Switch language without restarting capture | **PASS** | §3 (0 stale), §5 (1.0 s, same worker) |
+| No stale / mislabelled output after switch | **PASS** | §3, §4, §5 + [sim]/[test] |
+| Optional Japanese line | **PASS** | §5 |
+| Real floating overlay | **PASS** (hide/show/reset/always-on-top) · **PARTIAL** (drag/resize not exercised) | §5 |
+| Stop terminates capture and pending work | **PASS** | 9–771 ms; worker gone (§3–5) |
+| Errors visible and recoverable | **PASS** | worker crash §5; capture errors shown |
+| No unbounded delay | **PASS** | [sim] §7; live overload §4 (drop instead of lag) |
+| No manual orchestration | **PASS** | single executable starts the worker itself |
+| Linguistic quality ja→en | **PARTIAL** | 4/88 major meaning errors on correct text; implementer-reviewed, not human-verified; synthetic + read speech only |
+| Linguistic quality ja→es | **PARTIAL** (weaker) | 11/88 major meaning errors; implementer-reviewed |
+| Comparison with baselines | **PARTIAL** | Qwen3-4B measured; Phase 1 OPUS-MT not re-runnable here |
+| Independent references | **PARTIAL** | FLEURS/FLoRes (40) independent; conversational refs author-written |
+| Real VTuber / stream audio | **NOT TESTED** | no authorised recording available |
+| Latency speech start/end measured separately | **PASS** | §3, §4 |
+| CPU / memory / GPU measured | **PASS** (Windows) | §6 |
+| CPU-only fallback | **FAIL** (ASR ≈230 s/utterance); translator CPU fallback implemented, not measured | §1 |
+| Windows compiled | **PASS** | |
+| Windows physically validated | **PASS** for the items above (this PC is the RTX 4050 target) | §4–6 |
+| Signed installer | **NOT TESTED** (out of scope; NSIS bundling not run) | |
