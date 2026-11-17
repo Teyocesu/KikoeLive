@@ -96,8 +96,17 @@ impl AsrEngine for WhisperAsr {
         if let Some(prompt) = &self.cfg.initial_prompt {
             p.set_initial_prompt(prompt);
         }
-        let a = abort.clone();
-        p.set_abort_callback_safe(move || a.load(Ordering::Relaxed));
+        // whisper-rs 0.16's `set_abort_callback_safe` casts its boxed `dyn FnMut`
+        // back to the concrete closure type (UB) and in practice aborted every
+        // encode (whisper error -6). Use the raw hook with a correctly typed
+        // trampoline instead; `abort` outlives this `full()` call.
+        unsafe extern "C" fn abort_trampoline(user_data: *mut std::ffi::c_void) -> bool {
+            unsafe { (*(user_data as *const AtomicBool)).load(Ordering::Relaxed) }
+        }
+        unsafe {
+            p.set_abort_callback(Some(abort_trampoline));
+            p.set_abort_callback_user_data(Arc::as_ptr(abort) as *mut std::ffi::c_void);
+        }
 
         // whisper.cpp refuses input shorter than 100 ms; pad very short clips.
         let min_len = 16_000 / 4;
