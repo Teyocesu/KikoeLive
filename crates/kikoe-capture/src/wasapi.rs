@@ -43,19 +43,31 @@ const CHANNEL_PACKETS: usize = 256;
 const SILENCE_AFTER: Duration = Duration::from_millis(120);
 const DEFAULT_CHECK_EVERY: Duration = Duration::from_secs(2);
 
-struct ComGuard;
+/// COM for the current thread. If the thread already has COM in another
+/// apartment (e.g. a UI thread in STA, as Tauri's), RPC_E_CHANGED_MODE is not an
+/// error for our use: the MMDevice / WASAPI interfaces work in either apartment.
+/// We only uninitialise what we initialised.
+struct ComGuard {
+    owned: bool,
+}
 impl ComGuard {
     fn new() -> Result<Self, CaptureError> {
+        const RPC_E_CHANGED_MODE: windows::core::HRESULT = windows::core::HRESULT(0x8001_0106_u32 as i32);
         let hr = unsafe { CoInitializeEx(None, COINIT_MULTITHREADED) };
+        if hr == RPC_E_CHANGED_MODE {
+            return Ok(ComGuard { owned: false });
+        }
         if hr.is_err() {
             return Err(CaptureError::Device(format!("COM initialisation failed: {hr:?}")));
         }
-        Ok(ComGuard)
+        Ok(ComGuard { owned: true })
     }
 }
 impl Drop for ComGuard {
     fn drop(&mut self) {
-        unsafe { CoUninitialize() };
+        if self.owned {
+            unsafe { CoUninitialize() };
+        }
     }
 }
 

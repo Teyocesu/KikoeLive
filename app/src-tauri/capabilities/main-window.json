@@ -1,0 +1,22 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-window",
+  "description": "Controls for the main KikoeLive window.",
+  "windows": ["main"],
+  "permissions": [
+    "core:event:allow-listen",
+    "core:event:allow-unlisten",
+    "dialog:allow-open",
+    "allow-get-snapshot",
+    "allow-list-sources",
+    "allow-set-language",
+    "allow-update-settings",
+    "allow-reset-overlay-position",
+    "allow-subtitle-rendered",
+    "allow-download-model",
+    "allow-cancel-download",
+    "allow-use-existing-model",
+    "allow-start",
+    "allow-stop"
+  ]
+}

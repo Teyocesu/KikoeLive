@@ -1,0 +1,37 @@
+[package]
+name = "kikoe-live"
+description = "KikoeLive desktop application"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lib]
+name = "kikoe_live_lib"
+crate-type = ["rlib"]
+
+[features]
+default = []
+cuda = ["kikoe-asr/cuda"]
+metal = ["kikoe-asr/metal"]
+
+[build-dependencies]
+tauri-build = { version = "2.7", features = [] }
+
+[dependencies]
+kikoe-core.workspace = true
+kikoe-asr.workspace = true
+kikoe-capture.workspace = true
+# macos-private-api: required for a transparent overlay window on macOS (no-op elsewhere)
+tauri = { version = "2.12", features = ["macos-private-api"] }
+tauri-plugin-dialog = "2.8"
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+crossbeam-channel.workspace = true
+log.workspace = true
+env_logger.workspace = true
+anyhow.workspace = true
+dirs = "7"
+# native-tls = SChannel on Windows, Security.framework on macOS: no extra C toolchain (NASM) needed.
+reqwest = { version = "0.13", default-features = false, features = ["blocking", "native-tls"] }

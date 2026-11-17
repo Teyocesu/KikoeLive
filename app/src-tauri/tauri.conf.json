@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "KikoeLive",
+  "version": "0.2.0",
+  "identifier": "app.kikoelive.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "KikoeLive",
+        "url": "index.html",
+        "width": 460,
+        "height": 760,
+        "minWidth": 400,
+        "minHeight": 560,
+        "resizable": true
+      },
+      {
+        "label": "overlay",
+        "title": "KikoeLive subtitles",
+        "url": "overlay.html",
+        "width": 900,
+        "height": 150,
+        "minWidth": 320,
+        "minHeight": 80,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "resizable": true,
+        "visible": false,
+        "shadow": false,
+        "focus": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src ipc: http://ipc.localhost",
+      "capabilities": ["main-window", "overlay-window"]
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+    "externalBin": ["binaries/kikoe-mt"],
+    "shortDescription": "Live Japanese subtitles, translated locally",
+    "longDescription": "KikoeLive turns Japanese audio playing on your computer into English or Spanish subtitles, entirely on-device.",
+    "copyright": "KikoeLive contributors",
+    "category": "Utility",
+    "macOS": {
+      "minimumSystemVersion": "13.0",
+      "entitlements": null
+    }
+  }
+}
